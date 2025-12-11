@@ -1,0 +1,71 @@
+[debug] [2025-12-07T22:28:55.436Z] ----------------------------------------------------------------------
+[debug] [2025-12-07T22:28:55.438Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Javier\AppData\Local\npm-cache\_npx\7750544ccf494d8b\node_modules\firebase-tools\lib\bin\firebase.js login --no-localhost
+[debug] [2025-12-07T22:28:55.438Z] CLI Version:   14.27.0
+[debug] [2025-12-07T22:28:55.438Z] Platform:      win32
+[debug] [2025-12-07T22:28:55.439Z] Node Version:  v22.20.0
+[debug] [2025-12-07T22:28:55.439Z] Time:          Sun Dec 07 2025 23:28:55 GMT+0100 (hora estándar de Europa central)
+[debug] [2025-12-07T22:28:55.439Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  The Firebase CLI’s MCP server feature can optionally make use of Gemini in Firebase. Learn more about Gemini in Firebase and how it uses your data: https://firebase.google.com/docs/gemini-in-firebase#how-gemini-in-firebase-uses-your-data 
+[info] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you. 
+[debug] [2025-12-07T22:29:19.262Z] >>> [apiv2][query] POST https://auth.firebase.tools/attest [none]
+[debug] [2025-12-07T22:29:19.263Z] >>> [apiv2][body] POST https://auth.firebase.tools/attest {"session_id":"9f9b266c-dc5f-4095-b0af-7b8401755deb"}
+[debug] [2025-12-07T22:29:19.773Z] <<< [apiv2][status] POST https://auth.firebase.tools/attest 200
+[debug] [2025-12-07T22:29:19.773Z] <<< [apiv2][body] POST https://auth.firebase.tools/attest {"token":"Hhl9XjSb2XQt4VK-LIPIXbKgL0lqaII58EsTr_M_RhU"}
+[info] 
+[info] To sign in to the Firebase CLI:
+[info] 
+[info] 1. Take note of your session ID:
+[info] 
+[info]    9F9B2
+[info] 
+[info] 2. Visit the URL below on any device and follow the instructions to get your code:
+[info] 
+[info]    https://auth.firebase.tools/login?code_challenge=dF7_X5gnZrJhwIvfhpR3znJjIPGfhyjccqIiAh48aVk&session=9f9b266c-dc5f-4095-b0af-7b8401755deb&attest=Hhl9XjSb2XQt4VK-LIPIXbKgL0lqaII58EsTr_M_RhU
+[info] 
+[info] 3. Paste or enter the authorization code below once you have it:
+[info] 
+[debug] [2025-12-07T22:29:52.811Z] ExitPromptError: User force closed the prompt with SIGINT
+    at Interface.sigint (C:\Users\Javier\AppData\Local\npm-cache\_npx\7750544ccf494d8b\node_modules\@inquirer\core\dist\commonjs\lib\create-prompt.js:101:37)
+    at Interface.emit (node:events:519:28)
+    at Interface.emit (node:domain:489:12)
+    at [_ttyWrite] [as _ttyWrite] (node:internal/readline/interface:1128:18)
+    at ReadStream.onkeypress (node:internal/readline/interface:271:20)
+    at ReadStream.emit (node:events:531:35)
+    at ReadStream.emit (node:domain:489:12)
+    at emitKeys (node:internal/readline/utils:370:14)
+    at emitKeys.next (<anonymous>)
+    at ReadStream.onData (node:internal/readline/emitKeypressEvents:64:36)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-12-07T22:31:29.631Z] ----------------------------------------------------------------------
+[debug] [2025-12-07T22:31:29.633Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Javier\AppData\Local\npm-cache\_npx\7750544ccf494d8b\node_modules\firebase-tools\lib\bin\firebase.js login --no-localhost
+[debug] [2025-12-07T22:31:29.633Z] CLI Version:   14.27.0
+[debug] [2025-12-07T22:31:29.633Z] Platform:      win32
+[debug] [2025-12-07T22:31:29.633Z] Node Version:  v22.20.0
+[debug] [2025-12-07T22:31:29.634Z] Time:          Sun Dec 07 2025 23:31:29 GMT+0100 (hora estándar de Europa central)
+[debug] [2025-12-07T22:31:29.634Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  The Firebase CLI’s MCP server feature can optionally make use of Gemini in Firebase. Learn more about Gemini in Firebase and how it uses your data: https://firebase.google.com/docs/gemini-in-firebase#how-gemini-in-firebase-uses-your-data 
+[info] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you. 
+[info] 
+[info] i  To change your preferences at any time, run `firebase logout` and `firebase login` again. 
+[debug] [2025-12-07T22:31:40.654Z] >>> [apiv2][query] POST https://auth.firebase.tools/attest [none]
+[debug] [2025-12-07T22:31:40.654Z] >>> [apiv2][body] POST https://auth.firebase.tools/attest {"session_id":"377d03f4-2049-4138-8e08-41bd592e52f7"}
+[debug] [2025-12-07T22:31:41.015Z] <<< [apiv2][status] POST https://auth.firebase.tools/attest 200
+[debug] [2025-12-07T22:31:41.015Z] <<< [apiv2][body] POST https://auth.firebase.tools/attest {"token":"BgoNof5xgmnlC7fn2dRJqkkj4-m3MhX6-KM4pIJWVYE"}
+[info] 
+[info] To sign in to the Firebase CLI:
+[info] 
+[info] 1. Take note of your session ID:
+[info] 
+[info]    377D0
+[info] 
+[info] 2. Visit the URL below on any device and follow the instructions to get your code:
+[info] 
+[info]    https://auth.firebase.tools/login?code_challenge=w1Jy0KyyDB8XtqZgatG-3u6e3jbLgxANuoCnA_Jb9N8&session=377d03f4-2049-4138-8e08-41bd592e52f7&attest=BgoNof5xgmnlC7fn2dRJqkkj4-m3MhX6-KM4pIJWVYE
+[info] 
+[info] 3. Paste or enter the authorization code below once you have it:
+[info] 

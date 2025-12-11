@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-ink-950: #0f1115;
+  --color-ink-900: #171a20;
+  --color-ink-800: #22252d;
+  --color-ink-700: #2f333d;
+  --color-ink-500: #515866;
+  --color-ink-400: #6b7382;
+  --color-mist-20: #fbfaf8;
+  --color-mist-40: #f5f2ee;
+  --color-mist-80: #ece6df;
+  --color-mist-120: #e1d9d0;
+  --color-mist-160: #d5cabf;
+  --color-cameo-120: #efe1d4;
+  --color-cameo-160: #e4cfbd;
+  --color-cameo-220: #cfb69f;
+  --color-rose-160: #d9b2a1;
+  --color-rose-220: #c69480;
+  --color-rose-260: #b07562;
+  --color-hero-start: var(--color-rose-160);
+  --color-hero-mid: var(--color-cameo-160);
+  --color-hero-end: var(--color-rose-260);
+  --color-accent-400: var(--color-cameo-160);
+  --color-accent-500: var(--color-cameo-220);
+  --color-azure-400: #3149ff;
+  --color-azure-500: #1a33e8;
+  --shadow-soft: 0 32px 70px -45px rgb(20 22 28 / 0.45);
+  --radius-base: 1.25rem;
+  --radius-pill: 999px;
+  --font-sans: var(--font-manrope);
+  --font-serif: var(--font-playfair);
+  --font-mono: var(--font-roboto-mono);
+}
+
+body {
+  background: var(--color-mist-20);
+  color: var(--color-ink-900);
+  font-family: var(--font-serif), "Playfair Display", Georgia, serif;
+  text-rendering: optimizeLegibility;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-serif), "Playfair Display", Georgia, serif;
+  color: var(--color-ink-900);
+  letter-spacing: -0.01em;
+}
+
+h5,
+h6 {
+  font-family: var(--font-manrope), sans-serif;
+  font-weight: 600;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: var(--color-rose-220);
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-cameo-160) 45%, white);
+  color: var(--color-ink-900);
+}
+
+.numeric {
+  font-family: var(--font-roboto-mono), "SFMono-Regular", "Menlo", monospace;
+  letter-spacing: -0.04em;
+  font-feature-settings: "lnum", "tnum";
+}
+
+.text-hero-gradient {
+  background: linear-gradient(
+    120deg,
+    var(--color-hero-start),
+    var(--color-hero-mid),
+    var(--color-hero-end)
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}

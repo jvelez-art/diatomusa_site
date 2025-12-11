@@ -1,0 +1,240 @@
+DIATOMUSA — STORYTELLING & BRIEF DE SITIO WEB (v1.0)
+Fecha: 03/11/2025 — Zona horaria: Europa/Madrid
+Formato: .txt (listo para compartir con el/la agente web)
+
+────────────────────────────────────────────────
+0) PROPÓSITO DEL DOCUMENTO
+Este documento define qué es DIATOMUSA y concreta cómo debe ser nuestra página web para reflejar nuestra identidad y facilitar la venta a través de Amazon. Incluye narrativa de marca, arquitectura de información, copys de ejemplo, guía visual, SEO, y requisitos técnicos. Es un briefing integral para diseñar, escribir y desarrollar el sitio con foco en conversión.
+
+────────────────────────────────────────────────
+1) QUÉ ES DIATOMUSA (ESENCIA DE MARCA)
+• Promesa: Elegancia que absorbe — ciencia que se siente bajo los pies.
+• Qué hacemos: Diseñamos alfombrillas de baño de diatomita con estética minimalista y desempeño superior (secado visible en minutos, higiene y seguridad).
+• Por qué existimos: Creemos que la belleza cotidiana mejora la vida. Nuestras piezas combinan ingeniería de materiales con un lenguaje visual sobrio para transformar un gesto diario (salir de la ducha) en una experiencia de confort.
+• Diferencial cultural: Nos inspira el micro–arte histórico de las diatomeas (estructuras silíceas naturales) y lo reinterpretamos con sensibilidad contemporánea. La ciencia es parte de nuestra estética.
+• Dónde operamos: España/UE. Modelo principal de venta: Amazon FBA (arranque en España).
+• Cómo trabajamos: Rigor técnico, cumplimiento normativo UE, atención posventa cercana y un diseño pensado para durar.
+
+────────────────────────────────────────────────
+2) FUNDADORES Y COMPETENCIAS
+• Equipo con formación en física de nanoestructuras y materiales avanzados; experiencia aplicada a superficies porosas y desempeño capilar.
+• Obsesión por la calidad: pruebas internas de absorción, antideslizante, manchas y durabilidad; packaging con criterios de protección y reciclabilidad.
+• Vocación editorial/estética: cada pieza comunica calma, orden y precisión.
+
+────────────────────────────────────────────────
+3) PROPUESTA DE VALOR (CLARA Y MEDIBLE)
+1. Secado rápido visible: la superficie capilar absorbe y dispersa humedad en minutos.
+2. Higiene y antiolor: menos humedad residual = menor proliferación bacteriana.
+3. Seguridad: agarre estable y base antideslizante; cantos suavizados.
+4. Durabilidad: piedra de diatomita con tratamiento de superficie y mantenimiento sencillo.
+5. Estética: minimal, serena, con patrones que realzan el efecto de secado.
+6. Soporte local: garantía y atención al cliente en España.
+7. Amazon-first: disponibilidad Prime, logística FBA y devoluciones sencillas.
+
+────────────────────────────────────────────────
+4) PÚBLICO OBJETIVO
+• Hogares que valoran el diseño minimalista y la calidad tangible.
+• Pisos urbanos, segundas residencias, alojamientos boutique y hospitality selectivo.
+• Personas que buscan orden visual, limpieza y soluciones sostenibles y duraderas.
+
+────────────────────────────────────────────────
+5) VOZ Y ESTILO (GUÍA DE REDACCIÓN)
+• Tono: elegante, sobrio y cálido; culto sin tecnicismos innecesarios.
+• Estilo: frases claras, ritmo pausado, precisión léxica; evitar superlativos vacíos.
+• Principios: menos es más; mostrar, no prometer; datos y beneficios antes que adjetivos.
+
+────────────────────────────────────────────────
+6) ARQUITECTURA DE INFORMACIÓN (SITEMAP)
+• Inicio (Home)
+• Producto (PDP): Alfombrilla de diatomita — variaciones (color/tamaño)
+• Ciencia & Material (la diatomita y las diatomeas)
+• Historia (la mirada DIATOMUSA)
+• Uso y Cuidado
+• Opiniones (reseñas verificadas)
+• Prensa/Blog (notas, artículos, cultura del baño)
+• Comprar (CTA directo “Comprar en Amazon”)
+• Garantía y Soporte (FAQ, contacto)
+• Legal (Aviso legal, Privacidad, Cookies)
+• Landings específicas (QR por ASIN, campañas y tutoriales)
+
+────────────────────────────────────────────────
+7) WIREFRAMES Y CONTENIDO POR PÁGINA (LO QUE EL AGENTE DEBE DISEÑAR)
+
+7.1 Inicio (Home)
+Above the fold
+• Headline (opciones):
+  – “Elegancia que absorbe.”
+  – “Piedra de diatomita. Secado visible. Estética serena.”
+• Subheadline: “Alfombrillas de baño de diatomita: ciencia de materiales con diseño minimalista.”
+• CTA primario: “Comprar en Amazon” (abre nueva pestaña).
+• CTA secundario: “Conocer la ciencia” (ancora a sección ciencia en Home o a página Ciencia).
+• Visual: héroe lifestyle baño con vidrio al vapor, luz suave; foco en textura de la piedra.
+Bloques clave
+• Beneficios (iconografía): Secado Rápido / Higiene / Antideslizante / Durabilidad / Diseño.
+• “Cómo funciona” (3 pasos): absorber → dispersar → secar (microcapilaridad, sin jerga).
+• Módulo de variaciones: colores/tamaños disponibles.
+• Prueba social: reseñas (estrellas + citas cortas verificadas).
+• Garantía y soporte local (texto breve + enlace).
+• Banda de confianza: envío Prime (si aplica), devoluciones fáciles, atención en España.
+• Footer con enlaces a legal, contacto y redes.
+
+7.2 Producto (PDP)
+• Galería: textura macro + vistas de ambiente; detalle de cantos y base antideslizante.
+• Título: “Alfombrilla de Diatomita DIATOMUSA [Color/Tamaño] — Secado rápido, antideslizante, antimoho”
+• Bullets de conversión (5):
+  1) Secado visible en minutos.
+  2) Más higiene: menos humedad retenida.
+  3) Seguridad: superficie y base antideslizante.
+  4) Mantenimiento sencillo; guía incluida.
+  5) Diseño minimal y duradero (cantos suavizados).
+• Sección técnica: dimensiones, peso, materiales, acabados.
+• Módulo “Cómo se cuida” (ver 7.4).
+• “Por qué diatomita”: resumen con micrográfico simple.
+• CTA: “Comprar en Amazon” (sticky en móvil y desktop).
+• FAQ PDP (4–6 preguntas habituales).
+• Módulo de reseñas integradas (cuando existan).
+• Sellos de confianza (cumplimiento UE, atención en España).
+
+7.3 Ciencia & Material
+• Historia breve de las diatomeas y la diatomita (lenguaje accesible).
+• Esquema de microcapilaridad (ilustración simple).
+• Beneficios medibles (sin promesas exageradas).
+• Bloque editorial: inspiración en el micro–arte histórico de diatomeas (referencia cultural sin tecnicismos).
+
+7.4 Uso y Cuidado
+• Primer uso: retirar film, humedecer ligeramente si se recomienda, secar al aire.
+• Limpieza semanal: paño húmedo/ligero lijado fino si procede; evitar ácidos fuertes.
+• Recuperación de desempeño: exposición al aire y luz, instrucciones paso a paso.
+• Qué evitar: golpes/caídas, inmersión prolongada.
+• Video corto (si disponible) o pasos ilustrados.
+• CTA a Amazon para adquirir accesorios (si aplica).
+
+7.5 Opiniones
+• Reseñas verificadas (captura o integración).
+• Galería UGC (moderada).
+
+7.6 Historia
+• Manifiesto de marca: “La ciencia del confort cotidiano”.
+• Trayectoria del equipo (formación en materiales); tono humilde y preciso.
+• Fotografía editorial: estudio de texturas, luz, agua.
+
+7.7 Comprar
+• Explicación clara: vendemos en Amazon (ventajas: Prime, devoluciones, confianza).
+• Botones: uno por variante (Color/Tamaño) → enlaces a ASIN correspondientes.
+• Link a Brand Store (si está activa).
+
+7.8 Garantía y Soporte
+• Política de satisfacción (plazo, condiciones).
+• Contacto (formulario + email).
+• FAQ extendido (mantenimiento, compatibilidades, base antideslizante, etc.).
+
+7.9 Landings QR
+• URL amigables por ASIN (p. ej., /qr/[color]) con tutoriales y guía rápida.
+• Trackeo de campañas y códigos de caja.
+
+────────────────────────────────────────────────
+8) COPYS DE EJEMPLO (BASE PARA EL COPYWRITER)
+• Manifiesto corto (Home/Historia):
+  “Creemos que el confort es una forma de precisión. DIATOMUSA une ciencia de materiales y diseño sobrio para que cada paso, al salir de la ducha, sea limpio, estable y sereno.”
+• Beneficios en 5 viñetas (PDP):
+  – Secado visible en minutos.
+  – Más higiene, menos humedad.
+  – Superficie y base antideslizante.
+  – Mantenimiento sencillo y duradero.
+  – Diseño minimal que ordena el baño.
+• Microcopy CTA: “Comprar en Amazon”, “Ver mantenimiento”, “Leer opiniones reales”.
+
+────────────────────────────────────────────────
+9) INTEGRACIÓN CON AMAZON (REQUISITOS WEB)
+• CTAs “Comprar en Amazon” siempre visibles (sticky en móvil y desktop).
+• Enlaces por variante (cada color/tamaño → su ASIN). Usar UTM para atribución.
+• Página “Comprar” con explicación de por qué Amazon (Prime, logística, devoluciones).
+• Preparar contenido A+ paralelo (módulos e iconografía alineados).
+• Preparar sección de preguntas frecuentes sincronizadas con la ficha Amazon.
+• Botón “Abrir en Amazon” abre en nueva pestaña; no interferir con el Buy Box.
+• Espacio para insert de Brand Store cuando esté disponible.
+
+────────────────────────────────────────────────
+10) SEO BÁSICO Y CONTENIDO
+• Palabras clave principales (ES):
+  “alfombrilla de diatomita”, “piedra diatomita baño”, “alfombra baño piedra”, 
+  “esterilla secado rápido”, “alfombra antideslizante baño”, “piedra absorbente ducha”.
+• Long tail:
+  “alfombrilla diatomita secado rápido”, “alfombra baño antimoho”, “piedra diatomita antideslizante”.
+• Metadatos (plantilla):
+  – Title Home: “DIATOMUSA — Alfombrillas de diatomita | Elegancia que absorbe” (≤60–65 caracteres).
+  – Meta description: “Alfombrillas de baño de diatomita con secado visible, higiene y diseño minimalista. Comprar en Amazon.” (≤155–160).
+• Estructura H1/H2: un H1 por página; H2 para beneficios, ciencia, cuidado, reseñas.
+• Schema.org (recomendado): Product + AggregateRating (cuando haya reseñas), Organization, BreadcrumbList.
+• Blog/Prensa: 1–2 artículos de autoridad iniciales (cuidado, ciencia accesible, guía de compra).
+
+────────────────────────────────────────────────
+11) GUÍA VISUAL (DIRECCIÓN DE ARTE)
+• Paleta (referencia): blancos cálidos, grises piedra, acentos grafito; sensación de calma y limpieza.
+• Tipografía: Sans geométrica y elegante (p. ej., inter/urbanas) + serif editorial para titulares selectos (ligera). *El agente propondrá licencias seguras.*
+• Fotografía: luz suave, vapor de ducha, agua corriendo sobre vidrio, enfoque en textura; evitar saturación cromática.
+• Iconografía: trazos finos, geometría simple.
+• Motion: microtransiciones fluidas; evitar animaciones intrusivas.
+
+────────────────────────────────────────────────
+12) REQUISITOS TÉCNICOS (SUGERIDOS AL DESARROLLADOR/A)
+• Stack: Next.js + Tailwind CSS (SSR/ISR para velocidad); deploy recomendado en Vercel.
+• Accesibilidad: contraste AA, etiquetas ARIA, focus states claros.
+• Rendimiento: LCP < 2.5 s; imágenes optimizadas (WebP/AVIF), lazy load, CDN.
+• SEO técnico: rutas limpias, sitemap.xml, robots.txt, metadatos OG/Twitter.
+• i18n: sitio en ES (base), preparado para EN/IT si procede.
+• Analítica: consent mode, Google Analytics/Tag Manager; track de CTAs Amazon.
+• Legal/GDPR: banner de cookies, políticas de privacidad y aviso legal completos.
+• Seguridad: HTTPS, headers seguros, formulario con reCAPTCHA/alternativa de privacidad.
+• Integrables: módulo de reseñas (si usamos de Amazon/externo), schema JSON-LD.
+
+────────────────────────────────────────────────
+13) ASSETS A PRODUCIR
+• Fotos producto: héroe, textura macro, cantos, base antideslizante, packaging, lifestyle baño.
+• Infografías: microcapilaridad (cómo funciona), guía rápida de cuidado, comparativa antes/después.
+• Videos cortos: secado en tiempo real (time-lapse), mantenimiento.
+• Iconos: 5 beneficios + garantías.
+• Landing QR por ASIN: tutorial y preguntas rápidas.
+• Copys: headlines, bullets, FAQs y manifiesto.
+
+────────────────────────────────────────────────
+14) CONVERSIÓN, CONFIANZA Y SOPORTE
+• Prueba social: reseñas verificadas y citas breves.
+• Garantía clara y visible (en Home y PDP).
+• Política de devoluciones simple (alineada con Amazon).
+• Sección de dudas rápidas (FAQ) con 6–8 respuestas clave.
+• Newsletter opcional (lanzamientos/stock).
+
+────────────────────────────────────────────────
+15) ROADMAP Y ENTREGABLES DEL/DE LA AGENTE
+• 1) Sitemap, wireframes de baja fidelidad y propuesta visual (paleta + tipografías).
+• 2) Diseño UI de Home y PDP; componentes (cards, CTAs, módulos de beneficios).
+• 3) Copys finales (co-creación con este brief).
+• 4) Desarrollo (Next.js + Tailwind), QA y performance.
+• 5) Implementación de analítica y SEO técnico.
+• 6) Carga de assets optimizados, prueba de formularios y legal.
+• 7) Enlaces a Amazon/ASIN por variante; verificación de redirecciones y UTMs.
+• 8) Go-live y checklist de post-lanzamiento (monitoreo de CTAs, reseñas, errores 404).
+
+────────────────────────────────────────────────
+16) CHECKLIST DE PUBLICACIÓN
+[ ] H1 único por página y metadatos completos.
+[ ] Enlaces “Comprar en Amazon” verificados por variante.
+[ ] Speed audit (PageSpeed) y accesibilidad ≥ AA.
+[ ] Schema.org Product y Organization activos.
+[ ] Banner de cookies y legales visibles.
+[ ] Formularios operativos (contacto/soporte).
+[ ] Píxeles y eventos de analítica probados.
+[ ] 404, 500 y redirecciones configuradas.
+[ ] Sitemap enviado a Search Console.
+
+────────────────────────────────────────────────
+ANEXO A — A+ CONTENT (MAPA EN PARALELO)
+• Módulo héroe: textura y promesa (“Elegancia que absorbe”).
+• 5 iconos/beneficios con copy corto.
+• Cómo funciona (3 pasos) con microilustraciones.
+• Cuidado y mantenimiento (pasos simples).
+• Tabla de especificaciones (dimensiones, materiales).
+• Historia breve DIATOMUSA (editorial).
+
+— FIN DEL BRIEF —
