@@ -30,10 +30,10 @@ const robotoMono = RobotoMono({
 export const metadata: Metadata = {
   title: {
     template: "%s | DIATOMUSA",
-    default: "Diatomusa: Alfombra en piedra de diatomita"
+    default: "DIATOMUSA — Sutil elegancia en tu ritual diario",
   },
   description:
-    "Alfombras en piedra de diatomita con secado visible, higiene superior y diseño minimalista. Compra con envío Prime en Amazon.",
+    "Alfombrillas de diatomita con secado visible, higiene superior y diseño minimalista. Sutil elegancia en tu ritual diario. Compra con envío Prime en Amazon.",
   keywords: [
     "alfombrilla diatomita",
     "alfombra baño piedra",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "DIATOMUSA — Elegancia que absorbe",
+    title: "DIATOMUSA — Sutil elegancia en tu ritual diario",
     description:
       "Alfombrillas de diatomita que transforman tu ritual de baño en una experiencia de confort, higiene y diseño sereno.",
     url: "https://www.diatomusa.com",
