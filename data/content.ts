@@ -142,22 +142,16 @@ export const colorVariants = [
 
 export const videos = [
   {
-    src: "/videos/video-publicitario.mp4",
-    label: "Sensación",
+    src: "/videos/video_1_v1.mp4",
+    label: "Diseño y funcionamiento",
     description:
-      "Un plano secuencia que captura el gesto de pisar la piedra y cómo ordena el baño.",
+      "La historia principal: diseño, textura y secado visible en uso real.",
   },
   {
-    src: "/videos/video-bano-minimalista.mp4",
-    label: "Ambiente",
+    src: "/videos/video_2_v1.mp4",
+    label: "Sensación y ambiente",
     description:
-      "Iluminación suave y vapor en movimiento para destacar la textura serena del material.",
-  },
-  {
-    src: "/videos/video-acabado-seco.mp4",
-    label: "Detalle",
-    description:
-      "Macro de la microcapilaridad absorbiendo gotas y quedando seca al tacto.",
+      "Complementa la historia con un baño elegante, luz suave y calma visual.",
   },
 ];
 

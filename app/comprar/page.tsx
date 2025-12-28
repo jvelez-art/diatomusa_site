@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { amazonUrl, colorVariants, trustBadges } from "@/data/content";
 
@@ -36,19 +37,30 @@ export default function ComprarPage() {
             Usa enlaces con UTM cuando estén disponibles; por ahora abre la
             búsqueda general en Amazon.
           </p>
-          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+          <div className="mt-6 grid gap-6 sm:grid-cols-2">
             {colorVariants.map((variant) => (
               <Link
                 key={variant.name}
                 href={amazonUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-between rounded-[14px] border border-mist-160/60 bg-white/80 px-4 py-3 text-sm font-medium text-ink-700 transition hover:-translate-y-0.5 hover:border-rose-220/70"
+                className="group rounded-[18px] border border-mist-160/60 bg-white/80 p-4 text-sm font-medium text-ink-700 transition hover:-translate-y-0.5 hover:border-rose-220/70"
               >
-                <span>{variant.name}</span>
-                <span className="text-[10px] uppercase tracking-[0.2em] text-rose-220">
-                  Abrir Amazon
-                </span>
+                <div className="flex h-40 items-center justify-center overflow-hidden rounded-[14px] border border-mist-160/50 bg-mist-20 p-3">
+                  <Image
+                    src={variant.image}
+                    alt={`Alfombrilla DIATOMUSA ${variant.name}`}
+                    width={800}
+                    height={600}
+                    className="h-full w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+                  />
+                </div>
+                <div className="mt-4 flex items-center justify-between">
+                  <span className="text-base font-semibold">{variant.name}</span>
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-rose-220">
+                    Abrir Amazon
+                  </span>
+                </div>
               </Link>
             ))}
           </div>

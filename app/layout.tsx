@@ -30,7 +30,7 @@ const robotoMono = RobotoMono({
 export const metadata: Metadata = {
   title: {
     template: "%s | DIATOMUSA",
-    default: "DIATOMUSA — Sutil elegancia en tu ritual diario",
+    default: "DIATOMUSA: Sutil elegancia en tu ritual diario",
   },
   description:
     "Alfombrillas de diatomita con secado visible, higiene superior y diseño minimalista. Sutil elegancia en tu ritual diario. Compra con envío Prime en Amazon.",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "DIATOMUSA — Sutil elegancia en tu ritual diario",
+    title: "DIATOMUSA: Sutil elegancia en tu ritual diario",
     description:
       "Alfombrillas de diatomita que transforman tu ritual de baño en una experiencia de confort, higiene y diseño sereno.",
     url: "https://www.diatomusa.com",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "DIATOMUSA — Sutil elegancia en tu ritual diario",
+    title: "DIATOMUSA: Sutil elegancia en tu ritual diario",
     description:
       "Alfombrillas de diatomita con secado visible y estética minimalista.",
   },

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { amazonUrl, navigation } from "@/data/content";
+import { navigation } from "@/data/content";
 
 export default function Footer() {
   return (
@@ -14,14 +14,6 @@ export default function Footer() {
               Sutil elegancia en tu ritual diario. Alfombrillas de diatomita
               con ingeniería de materiales y diseño sereno.
             </p>
-            <a
-              href={amazonUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-ink-900/10 bg-ink-900 px-4 py-2 text-xs font-serif font-semibold uppercase tracking-[0.08em] text-white transition hover:-translate-y-0.5 hover:bg-ink-800"
-            >
-              Comprar en Amazon
-            </a>
           </div>
 
           <div>

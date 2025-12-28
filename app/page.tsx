@@ -26,7 +26,7 @@ export default function Home() {
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_rgba(207,182,159,0.36),_transparent_72%)]" />
         <div className="absolute inset-0 -z-20 bg-[linear-gradient(145deg,_rgba(255,255,255,0.92),_rgba(221,204,186,0.42)_48%,_transparent_88%)]" />
 
-        <div className="mx-auto grid max-w-6xl items-start gap-12 px-6 py-20 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:py-28">
+        <div className="mx-auto grid max-w-6xl items-start gap-12 px-6 py-20 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-8 lg:py-28">
           <div className="space-y-7">
             <div className="inline-flex items-center gap-3 rounded-full bg-white/60 px-4 py-2 text-xs uppercase tracking-[0.22em] text-ink-600 shadow-[0_22px_40px_-30px_rgba(20,22,28,0.35)]">
               <span>Alfombra en piedra de diatomita</span>
@@ -36,7 +36,7 @@ export default function Home() {
             <p className="text-[15px] uppercase tracking-[0.32em] text-rose-260 font-semibold">
               {tagline}
             </p>
-            <h1 className="font-serif text-[42px] font-semibold leading-tight sm:text-[48px] text-ink-900">
+            <h1 className="font-serif text-[42px] font-bold leading-tight tracking-[0.06em] sm:text-[48px] text-ink-900">
               El Encuentro.
             </h1>
 
@@ -59,14 +59,6 @@ export default function Home() {
 
             <div className="flex flex-wrap items-center gap-4">
               <Link
-                href={amazonUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-rose-220 px-5 py-2 text-xs font-serif font-semibold uppercase tracking-[0.12em] text-ink-900 shadow-[0_24px_38px_-26px_rgba(129,141,163,0.45)] transition hover:-translate-y-0.5 hover:bg-rose-260"
-              >
-                Comprar en Amazon
-              </Link>
-              <Link
                 href="/ciencia"
                 className="text-sm font-semibold text-ink-700 underline-offset-8 hover:underline"
               >
@@ -86,7 +78,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative">
+          <div className="relative lg:self-center">
             <div className="absolute inset-0 -left-6 -z-10 rounded-[110px] bg-[radial-gradient(circle_at_center,_rgba(207,182,159,0.48),_transparent_72%)]" />
             <div className="relative overflow-hidden rounded-[28px] border border-mist-160/60 bg-mist-40 shadow-[0_85px_110px_-70px_rgba(20,22,28,0.55)] transition">
               <Image
@@ -98,6 +90,51 @@ export default function Home() {
                 priority
               />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-mist-80/45 via-transparent to-transparent" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-mist-160/50 bg-mist-20">
+        <div className="mx-auto max-w-6xl px-6 py-16 lg:px-8">
+          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+            <div className="space-y-4">
+              <p className="text-xs uppercase tracking-[0.32em] text-ink-500">
+                El Encuentro en uso real
+              </p>
+              <h2 className="text-3xl font-semibold sm:text-4xl">
+                Diseño, textura y secado visible.
+              </h2>
+              <p className="text-sm text-ink-500 sm:text-base">
+                Un vistazo directo a cómo la piedra absorbe y se regenera en
+                minutos, sin perder la calma del diseño.
+              </p>
+              <p className="text-sm text-ink-500 sm:text-base">
+                Este video abre la historia del producto y muestra su
+                funcionamiento de forma clara y completa.
+              </p>
+            </div>
+            <div className="overflow-hidden rounded-[2rem] border border-mist-160/50 bg-white/70 shadow-[0_40px_90px_-60px_rgba(27,29,36,0.35)]">
+              <div className="relative bg-ink-900/5" style={{ aspectRatio: "16 / 9" }}>
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  controls
+                  poster="/images/encuentro/encuentro-gris-oscuro-ducha-uso.jpg"
+                  className="h-full w-full object-contain"
+                >
+                  <source src={videos[0]?.src} type="video/mp4" />
+                  Tu navegador no soporta video HTML5.
+                </video>
+                <span className="absolute left-6 top-6 rounded-full bg-ink-900/80 px-3 py-1 text-[11px] uppercase tracking-[0.3em] text-cameo-220">
+                  {videos[0]?.label}
+                </span>
+              </div>
+              <div className="space-y-3 px-6 py-6">
+                <p className="text-sm text-ink-500">{videos[0]?.description}</p>
+              </div>
             </div>
           </div>
         </div>
@@ -279,12 +316,19 @@ export default function Home() {
             <h2 className="text-3xl font-semibold sm:text-4xl">
               Ciencia, arte y serenidad en el País Vasco.
             </h2>
-            <p className="text-base text-mist-40/85">
-              Investigamos materiales avanzados y microcapilaridad, y los
-              convertimos en piezas que ordenan el baño. Inspirados en la
-              geometría natural de las diatomeas, cada alfombrilla es una
-              micro-escena de calma.
-            </p>
+            <div className="space-y-4 text-base text-mist-40/85">
+              <p>
+                Nacimos en el País Vasco, uniendo investigación en
+                microcapilaridad con una mirada editorial del diseño. La
+                diatomita, formada por diatomeas, nos inspira por su porosidad
+                natural y su capacidad de absorber sin esfuerzo.
+              </p>
+              <p>
+                Transformamos ese conocimiento en piezas serenas: secan en
+                minutos, ordenan el espacio y convierten el baño en un ritual
+                silencioso de bienestar.
+              </p>
+            </div>
             <Link
               href="/historia"
               className="inline-flex items-center gap-2 text-sm font-semibold text-rose-160 underline-offset-8 hover:underline"
@@ -307,7 +351,7 @@ export default function Home() {
 
       <section id="cuidado" className="bg-mist-80/60 py-20">
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
             <div className="space-y-4">
               <p className="text-xs uppercase tracking-[0.3em] text-ink-700">
                 Uso y cuidado
@@ -319,31 +363,28 @@ export default function Home() {
                 Mantenimiento breve, sin detergentes agresivos. La piedra se
                 regenera con ventilación y limpieza suave.
               </p>
-            </div>
-
-            <div className="grid gap-6 lg:grid-cols-[1fr_0.9fr]">
-              <ul className="grid gap-6 sm:grid-cols-2">
+              <ul className="mt-6 grid gap-4 sm:grid-cols-2">
                 {careSteps.map((step, index) => (
                   <li
                     key={step}
-                    className="flex flex-col gap-3 rounded-[var(--radius-base)] border border-mist-160/55 bg-mist-20/90 p-6"
+                    className="flex flex-col gap-2 rounded-[18px] border border-mist-160/55 bg-mist-20/90 p-4"
                   >
-                    <span className="numeric text-3xl text-accent-500">
+                    <span className="numeric text-2xl text-accent-500">
                       {String(index + 1).padStart(2, "0")}
                     </span>
-                    <p className="text-sm text-ink-500">{step}</p>
+                    <p className="text-xs text-ink-500">{step}</p>
                   </li>
                 ))}
               </ul>
-              <div className="overflow-hidden rounded-[var(--radius-base)] border border-mist-160/60 shadow-[0_28px_60px_-48px_rgba(24,26,32,0.28)]">
-                <Image
-                  src="/images/encuentro/encuentro-gris-oscuro-cuidado-lija-antideslizante.jpg"
-                  alt="Lijado suave y base antideslizante de la alfombrilla DIATOMUSA"
-                  width={900}
-                  height={900}
-                  className="h-full w-full object-cover"
-                />
-              </div>
+            </div>
+            <div className="flex items-center justify-center overflow-hidden rounded-[var(--radius-base)] border border-mist-160/60 bg-white/70 p-6 shadow-[0_28px_60px_-48px_rgba(24,26,32,0.28)]">
+              <Image
+                src="/images/encuentro/encuentro-gris-oscuro-cuidado-lija-antideslizante.jpg"
+                alt="Lijado suave y base antideslizante de la alfombrilla DIATOMUSA"
+                width={1000}
+                height={1000}
+                className="h-auto w-full object-contain"
+              />
             </div>
           </div>
         </div>
@@ -380,37 +421,6 @@ export default function Home() {
               className="text-sm font-semibold text-ink-700 underline-offset-6 hover:underline"
             >
               Leer más opiniones
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="border-y border-ink-700/25 bg-ink-900 text-mist-40">
-        <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-6 py-16 text-center lg:px-8">
-          <p className="text-xs uppercase tracking-[0.3em]">
-            Listo para un baño en calma
-          </p>
-          <h2 className="text-3xl font-semibold sm:text-4xl">
-            Siente la diferencia desde la primera pisada.
-          </h2>
-          <p className="max-w-2xl text-sm text-mist-40/80">
-            Cada alfombrilla DIATOMUSA está diseñada para ofrecer confort
-            inmediato, higiene visible y una estética que ordena el espacio.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href={amazonUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full bg-[#667ba1ff] px-3 py-1.5 text-xs font-serif font-semibold uppercase tracking-[0.01em] text-white shadow-[0_24px_38px_-28px_rgba(129,141,163,0.45)] transition hover:bg-[#6f7c95]"
-            >
-              Comprar en Amazon
-            </Link>
-            <Link
-              href="/comprar"
-              className="rounded-full border border-mist-40/55 px-4 py-1.55 text-sm font-semibold text-mist-40 transition hover:border-accent-400 hover:text-accent-400"
-            >
-              Ver variantes
             </Link>
           </div>
         </div>
@@ -462,52 +472,44 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-t border-mist-160/60 bg-mist-20 py-[72px]">
+      <section className="border-t border-ink-700/25 bg-ink-900 py-[72px] text-mist-40">
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
-          <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
-            <div className="max-w-xl space-y-4">
-              <p className="text-xs uppercase tracking-[0.32em] text-ink-500">
-                Clips en loop
+          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+            <div className="space-y-4">
+              <p className="text-xs uppercase tracking-[0.32em] text-mist-40/70">
+                Sensación, ambiente y detalle
               </p>
               <h2 className="text-3xl font-semibold sm:text-4xl">
-                Sensación, ambiente y detalle.
+                Una atmósfera serena para el ritual diario.
               </h2>
-              <p className="text-sm text-ink-500 sm:text-base">
-                Videos breves para ver el secado, la textura y la atmósfera de
-                la pieza en uso.
+              <p className="text-sm text-mist-40/80 sm:text-base">
+                Como continuación del relato, este clip sitúa la pieza en un
+                baño elegante, con luz suave y materiales nobles que realzan su
+                presencia.
               </p>
             </div>
-          </div>
 
-          <div className="mt-10 overflow-x-auto pb-6">
-            <div className="flex min-w-full snap-x gap-6">
-              {videos.map((slide) => (
-                <article
-                  key={slide.src}
-                  className="group relative w-[320px] flex-shrink-0 snap-center overflow-hidden rounded-[1.75rem] border border-mist-160/45 bg-mist-80 shadow-[0_38px_76px_-55px_rgba(27,29,36,0.28)] transition hover:border-rose-220/45 hover:shadow-[0_48px_98px_-55px_rgba(207,182,159,0.42)] sm:w-[360px]"
+            <article className="overflow-hidden rounded-[1.75rem] border border-mist-40/30 bg-ink-800/70 shadow-[0_30px_70px_-50px_rgba(6,8,12,0.6)]">
+              <div className="relative">
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  poster="/images/encuentro/encuentro-rosa-ducha-uso.jpg"
+                  className="h-[420px] w-full object-cover sm:h-[520px]"
                 >
-                  <div className="relative">
-                    <video
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      poster="/images/encuentro/encuentro-gris-oscuro-ducha-uso.jpg"
-                      className="h-[220px] w-full object-cover"
-                    >
-                      <source src={slide.src} type="video/mp4" />
-                      Tu navegador no soporta video HTML5.
-                    </video>
-                    <span className="absolute left-5 top-5 rounded-full bg-ink-900/80 px-3 py-1 text-[11px] uppercase tracking-[0.3em] text-cameo-220">
-                      {slide.label}
-                    </span>
-                  </div>
-                  <div className="space-y-3 px-6 py-6">
-                    <p className="text-sm text-ink-500">{slide.description}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
+                  <source src={videos[1]?.src} type="video/mp4" />
+                  Tu navegador no soporta video HTML5.
+                </video>
+                <span className="absolute left-5 top-5 rounded-full bg-ink-900/80 px-3 py-1 text-[11px] uppercase tracking-[0.3em] text-cameo-220">
+                  {videos[1]?.label}
+                </span>
+              </div>
+              <div className="space-y-3 px-6 py-6">
+                <p className="text-sm text-mist-40/80">{videos[1]?.description}</p>
+              </div>
+            </article>
           </div>
         </div>
       </section>

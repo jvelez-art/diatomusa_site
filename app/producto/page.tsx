@@ -17,21 +17,13 @@ export default function ProductoPage() {
             Producto
           </p>
           <h1 className="mt-3 text-3xl font-semibold sm:text-4xl">
-            Alfombrilla de diatomita DIATOMUSA — {tagline}
+            Alfombrilla de diatomita DIATOMUSA: {tagline}
           </h1>
           <p className="mt-4 text-base text-ink-600">
             Secado visible en minutos, base antideslizante y diseño sereno.
             Ingeniería de materiales aplicada al baño cotidiano.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <Link
-              href={amazonUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full bg-ink-900 px-4 py-2 text-xs font-semibold uppercase tracking-[0.08em] text-white transition hover:-translate-y-0.5 hover:bg-ink-800"
-            >
-              Comprar en Amazon
-            </Link>
             <Link
               href="/ciencia"
               className="text-sm font-semibold text-ink-700 underline-offset-6 hover:underline"
@@ -104,13 +96,15 @@ export default function ProductoPage() {
                   key={variant.image}
                   className="overflow-hidden rounded-[18px] border border-mist-160/60 shadow-[0_28px_60px_-48px_rgba(24,26,32,0.28)]"
                 >
-                  <Image
-                    src={variant.image}
-                    alt={`Alfombrilla DIATOMUSA color ${variant.name}`}
-                    width={800}
-                    height={640}
-                    className="h-full w-full object-cover"
-                  />
+                  <div className="flex items-center justify-center bg-mist-20 p-3">
+                    <Image
+                      src={variant.image}
+                      alt={`Alfombrilla DIATOMUSA color ${variant.name}`}
+                      width={800}
+                      height={640}
+                      className="h-56 w-full object-contain"
+                    />
+                  </div>
                   <div className="px-4 py-3 text-sm font-semibold text-ink-800">
                     {variant.name}
                   </div>
@@ -149,16 +143,19 @@ export default function ProductoPage() {
           <p className="text-sm text-mist-40/80">
             Prime, devoluciones fáciles y atención desde España. Compra segura.
           </p>
-          <Link
-            href={amazonUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex w-fit items-center gap-2 rounded-full bg-[#667ba1ff] px-4 py-2 text-xs font-semibold uppercase tracking-[0.08em] text-white transition hover:-translate-y-0.5 hover:bg-[#6f7c95]"
-          >
-            Comprar en Amazon
-          </Link>
         </div>
       </section>
+
+      <div className="fixed inset-x-4 bottom-4 z-40 flex items-center justify-center lg:inset-x-auto lg:left-1/2 lg:w-auto lg:-translate-x-1/2">
+        <Link
+          href={amazonUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 rounded-full bg-rose-220 px-5 py-2 text-xs font-serif font-semibold uppercase tracking-[0.12em] text-ink-900 shadow-[0_20px_45px_-24px_rgba(176,117,98,0.55)] transition hover:-translate-y-0.5 hover:bg-rose-260"
+        >
+          Comprar en Amazon
+        </Link>
+      </div>
     </div>
   );
 }

@@ -10,7 +10,7 @@ export default function HistoriaPage() {
             Historia
           </p>
           <h1 className="mt-3 text-3xl font-semibold sm:text-4xl">
-            DIATOMUSA — {tagline}
+            DIATOMUSA: {tagline}
           </h1>
           <p className="mt-4 max-w-3xl text-base text-ink-600">
             Nacimos en el País Vasco, combinando investigación en microcapilaridad con una mirada editorial. Cada pieza es una escena de calma que ordena el baño.
@@ -35,11 +35,26 @@ export default function HistoriaPage() {
             <p className="text-xs uppercase tracking-[0.3em]">
               Origen y método
             </p>
-            <p className="text-sm text-mist-40/85">
-              Equipo con formación en física de nanoestructuras y materiales
-              avanzados. Ensayos internos de absorción, antideslizante y
-              durabilidad. Atención y garantía desde España.
-            </p>
+            <div className="space-y-3 text-sm text-mist-40/85">
+              <p>
+                La diatomita nace de algas microscópicas cuyo caparazón silíceo
+                se deposita durante siglos hasta formar un mineral ligero y
+                poroso. Esa microestructura es la que hace posible el secado
+                rápido y la sensación de superficie siempre limpia.
+              </p>
+              <p>
+                Nuestro método se apoya en una tradición científica que estudia
+                cómo recolectar, limpiar y preservar esas valvas de sílice sin
+                alterar su porosidad. Seleccionamos el material, lo tratamos
+                para eliminar impurezas y verificamos su desempeño en cada
+                pieza.
+              </p>
+              <p>
+                Equipo con formación en física de nanoestructuras y materiales
+                avanzados. Ensayos internos de absorción, antideslizante y
+                durabilidad. Atención y garantía desde España.
+              </p>
+            </div>
           </div>
           <div className="overflow-hidden rounded-[var(--radius-base)] shadow-[0_42px_70px_-50px_rgba(0,0,0,0.55)]">
             <Image

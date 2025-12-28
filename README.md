@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DIATOMUSA - Sitio web
 
-## Getting Started
+Sitio corporativo y comercial de DIATOMUSA construido con Next.js (App Router)
+y exportacion estatica. El build genera `out/`, lista para hosting estatico.
 
-First, run the development server:
+## Objetivo del sitio
+- Contar la historia del producto "El Encuentro".
+- Explicar beneficios, ciencia y cuidado.
+- Mostrar variantes reales y material visual.
+- Dirigir a compra en Amazon desde puntos clave.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Arquitectura general
+- **Next.js App Router**: cada carpeta en `app/` es una ruta.
+- **Contenido centralizado**: `data/content.ts` concentra textos, listas y media.
+- **Componentes reutilizables**: `components/` (header, footer, etc.).
+- **Assets estaticos**: `public/images/` y `public/videos/`.
+- **Export estatico**: `next.config.ts` usa `output: 'export'`.
+- **Hosting estatico**: `firebase.json` apunta a `out/`.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Estructura del proyecto
+| Ruta | Proposito |
+| --- | --- |
+| `app/` | Paginas, layout y estilos globales. |
+| `app/layout.tsx` | Layout base y estructura compartida. |
+| `app/globals.css` | Tokens visuales y estilos globales. |
+| `components/` | UI reutilizable (Header, Footer, etc.). |
+| `data/content.ts` | Copy, links, arrays y media usados en paginas. |
+| `public/images/` | Imagenes estaticas (incluye `public/images/encuentro/`). |
+| `public/videos/` | Videos estaticos (actualmente `video_1_v1.mp4`, `video_2_v1.mp4`). |
+| `README-storytelling.md` | Narrativa visual y guion de imagenes. |
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Mapa de rutas
+| Ruta web | Archivo | Descripcion |
+| --- | --- | --- |
+| `/` | `app/page.tsx` | Home con narrativa, video principal y secciones clave. |
+| `/producto` | `app/producto/page.tsx` | Detalle del producto y variantes. |
+| `/ciencia` | `app/ciencia/page.tsx` | Ciencia y material. |
+| `/historia` | `app/historia/page.tsx` | Origen y manifiesto. |
+| `/cuidado` | `app/cuidado/page.tsx` | Uso y cuidado. |
+| `/opiniones` | `app/opiniones/page.tsx` | Reseñas. |
+| `/comprar` | `app/comprar/page.tsx` | Enlaces de compra. |
+| `/garantia` | `app/garantia/page.tsx` | Garantia y soporte. |
+| `/aviso-legal` | `app/aviso-legal/page.tsx` | Legal. |
+| `/privacidad` | `app/privacidad/page.tsx` | Privacidad. |
+| `/cookies` | `app/cookies/page.tsx` | Cookies. |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Arquitectura de la Home (`app/page.tsx`)
+Orden y proposito de las secciones:
+1. **Hero**: historia y presentacion de "El Encuentro".
+2. **Video principal**: seccion dedicada que muestra el uso real del producto.
+3. **Beneficios clave**: lista de ventajas del material.
+4. **Como funciona**: microcapilaridad y proceso de secado.
+5. **Colecciones cromaticas**: variantes reales y medidas.
+6. **Ciencia**: pilares del producto.
+7. **Historia**: contexto de marca.
+8. **Uso y cuidado**: pasos de mantenimiento.
+9. **Resenas**: testimonios.
+10. **Garantia y soporte**: condiciones y FAQ.
+11. **Video ambiente**: pieza visual para sensacion y atmosfera.
 
-## Learn More
+## Como correr en local (desarrollo)
+1. `npm install`
+2. `npm run dev`
+3. Abrir `http://localhost:3000`
 
-To learn more about Next.js, take a look at the following resources:
+## Compilacion (build)
+- `npm run build`
+- Salida: `out/`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Produccion (deploy estatico)
+1. Ejecutar `npm run build`.
+2. Publicar la carpeta `out/` en hosting estatico.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Notas:
+- Firebase Hosting ya esta configurado en `firebase.json`.
+- Si usas Firebase CLI: `firebase deploy`.
 
-## Deploy on Vercel
+## Como actualizar contenido
+- **Textos y listas**: editar `data/content.ts`.
+- **Imagenes**: agregar en `public/images/` con nombres ASCII y claros.
+- **Videos**: agregar en `public/videos/` y actualizar `data/content.ts`.
+- **Narrativa visual**: ver `README-storytelling.md` y
+  `public/images/encuentro/README.md`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Convenciones recomendadas
+- Mantener nombres ASCII y descriptivos.
+- No editar `out/` manualmente (es generado).
+- Centralizar copy en `data/content.ts` antes de tocar paginas.
