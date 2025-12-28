@@ -33,15 +33,14 @@ export default function Home() {
               <span className="h-1 w-1 rounded-full bg-rose-220" />
               <span>DIATOMUSA</span>
             </div>
-            <p className="text-[17px] uppercase tracking-[0.3em] text-rose-260">
+            <p className="text-[15px] uppercase tracking-[0.32em] text-rose-260 font-semibold">
               {tagline}
             </p>
-            <h1 className="text-4xl font-semibold leading-tight sm:text-[44px]">
-              El Encuentro: elegancia que absorbe, ciencia que se siente bajo
-              los pies.
+            <h1 className="font-serif text-[42px] font-semibold leading-tight sm:text-[48px] text-ink-900">
+              El Encuentro.
             </h1>
 
-            <div className="space-y-4">
+            <div className="space-y-4 max-w-xl">
               <h3
                 className="text-[19px] font-medium italic leading-snug tracking-[0.01em] text-ink-700"
                 style={{
@@ -63,7 +62,7 @@ export default function Home() {
                 href={amazonUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full bg-[#667ba1ff] px-4 py-2 text-xs font-sans font-semibold uppercase tracking-[0.08em] text-white shadow-[0_24px_38px_-28px_rgba(129,141,163,0.45)] transition hover:bg-[#6f7c95]"
+                className="inline-flex items-center gap-2 rounded-full bg-rose-220 px-5 py-2 text-xs font-serif font-semibold uppercase tracking-[0.12em] text-ink-900 shadow-[0_24px_38px_-26px_rgba(129,141,163,0.45)] transition hover:-translate-y-0.5 hover:bg-rose-260"
               >
                 Comprar en Amazon
               </Link>
@@ -403,7 +402,7 @@ export default function Home() {
               href={amazonUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-[#667ba1ff] px-3 py-1.5 text-xs font-sans font-semibold uppercase tracking-[0.01em] text-white shadow-[0_24px_38px_-28px_rgba(129,141,163,0.45)] transition hover:bg-[#6f7c95]"
+              className="rounded-full bg-[#667ba1ff] px-3 py-1.5 text-xs font-serif font-semibold uppercase tracking-[0.01em] text-white shadow-[0_24px_38px_-28px_rgba(129,141,163,0.45)] transition hover:bg-[#6f7c95]"
             >
               Comprar en Amazon
             </Link>
@@ -518,7 +517,7 @@ export default function Home() {
           href={amazonUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 rounded-full bg-ink-900 px-5 py-2 text-xs font-semibold uppercase tracking-[0.08em] text-white shadow-[0_20px_45px_-24px_rgba(0,0,0,0.45)] transition hover:-translate-y-0.5 hover:bg-ink-800"
+          className="flex items-center gap-2 rounded-full bg-rose-220 px-5 py-2 text-xs font-serif font-semibold uppercase tracking-[0.12em] text-ink-900 shadow-[0_20px_45px_-24px_rgba(176,117,98,0.55)] transition hover:-translate-y-0.5 hover:bg-rose-260"
         >
           Comprar en Amazon
         </Link>

@@ -10,7 +10,7 @@ export default function Footer() {
             <h3 className="font-serif text-lg font-bold text-ink-900">
               DIATOMUSA
             </h3>
-            <p className="text-sm leading-relaxed text-ink-500">
+            <p className="text-sm leading-relaxed text-ink-500 font-serif">
               Sutil elegancia en tu ritual diario. Alfombrillas de diatomita
               con ingeniería de materiales y diseño sereno.
             </p>
@@ -18,7 +18,7 @@ export default function Footer() {
               href={amazonUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-ink-900/10 bg-ink-900 px-4 py-2 text-xs font-semibold uppercase tracking-[0.08em] text-white transition hover:-translate-y-0.5 hover:bg-ink-800"
+              className="inline-flex items-center gap-2 rounded-full border border-ink-900/10 bg-ink-900 px-4 py-2 text-xs font-serif font-semibold uppercase tracking-[0.08em] text-white transition hover:-translate-y-0.5 hover:bg-ink-800"
             >
               Comprar en Amazon
             </a>

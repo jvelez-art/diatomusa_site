@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "DIATOMUSA — Elegancia que absorbe",
+    title: "DIATOMUSA — Sutil elegancia en tu ritual diario",
     description:
       "Alfombrillas de diatomita con secado visible y estética minimalista.",
   },

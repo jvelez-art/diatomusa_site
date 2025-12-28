@@ -32,7 +32,9 @@
   --shadow-soft: 0 32px 70px -45px rgb(20 22 28 / 0.45);
   --radius-base: 1.25rem;
   --radius-pill: 999px;
-  --font-sans: var(--font-manrope);
+  /* Usamos Playfair como tipografía principal incluso para el “sans” de utilidades,
+     para mantener coherencia editorial en toda la página. */
+  --font-sans: var(--font-playfair);
   --font-serif: var(--font-playfair);
   --font-mono: var(--font-roboto-mono);
 }
@@ -56,7 +58,7 @@ h4 {
 
 h5,
 h6 {
-  font-family: var(--font-manrope), sans-serif;
+  font-family: var(--font-playfair), "Playfair Display", Georgia, serif;
   font-weight: 600;
 }
 
