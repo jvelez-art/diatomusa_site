@@ -37,8 +37,8 @@ export default function CuidadoPage() {
             </ul>
             <div className="overflow-hidden rounded-[var(--radius-base)] border border-mist-160/60 shadow-[0_32px_70px_-48px_rgba(20,22,28,0.4)]">
               <Image
-                src="/images/limpieza_lijado.jpg"
-                alt="Limpieza de la alfombrilla con lija suave"
+                src="/images/encuentro/encuentro-gris-oscuro-cuidado-lija-antideslizante.jpg"
+                alt="Lijado suave y base antideslizante de la alfombrilla DIATOMUSA"
                 width={1200}
                 height={900}
                 className="h-full w-full object-cover"

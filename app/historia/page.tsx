@@ -43,8 +43,8 @@ export default function HistoriaPage() {
           </div>
           <div className="overflow-hidden rounded-[var(--radius-base)] shadow-[0_42px_70px_-50px_rgba(0,0,0,0.55)]">
             <Image
-              src="/images/hero-diatomusa.jpg"
-              alt="Textura y vapor en un baño con DIATOMUSA"
+              src="/images/encuentro/encuentro-gris-oscuro-ducha-uso.jpg"
+              alt="Alfombrilla DIATOMUSA gris oscuro en baño contemporáneo"
               width={1400}
               height={1000}
               className="h-full w-full object-cover"

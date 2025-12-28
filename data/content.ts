@@ -128,10 +128,16 @@ export const heroStory = {
 };
 
 export const colorVariants = [
-  { name: "Rosa", image: "/images/hero-rosa.jpg" },
-  { name: "Verde", image: "/images/hero-verde.jpg" },
-  { name: "Gris oscuro", image: "/images/hero-gris-oscuro.jpg" },
-  { name: "Colección", image: "/images/coleccion-azul.jpg" },
+  { name: "Rosa", image: "/images/encuentro/encuentro-rosa-packaging.jpg" },
+  { name: "Verde", image: "/images/encuentro/encuentro-verde-packaging.jpg" },
+  {
+    name: "Gris oscuro",
+    image: "/images/encuentro/encuentro-gris-oscuro-packaging.jpg",
+  },
+  {
+    name: "Colección",
+    image: "/images/encuentro/encuentro-variantes-dimensiones-colores.jpg",
+  },
 ];
 
 export const videos = [

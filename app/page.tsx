@@ -90,8 +90,8 @@ export default function Home() {
             <div className="absolute inset-0 -left-6 -z-10 rounded-[110px] bg-[radial-gradient(circle_at_center,_rgba(207,182,159,0.48),_transparent_72%)]" />
             <div className="relative overflow-hidden rounded-[28px] border border-mist-160/60 bg-mist-40 shadow-[0_85px_110px_-70px_rgba(20,22,28,0.55)] transition">
               <Image
-                src="/images/hero-rosa.jpg"
-                alt="Alfombrilla de diatomita DIATOMUSA en acabado rosa"
+                src="/images/encuentro/encuentro-rosa-ducha-uso.jpg"
+                alt="Alfombrilla de diatomita DIATOMUSA en rosa a la salida de la ducha"
                 width={1660}
                 height={1240}
                 className="h-full w-full object-cover"
@@ -171,8 +171,8 @@ export default function Home() {
 
             <div className="relative overflow-hidden rounded-[var(--radius-base)]">
               <Image
-                src="/images/macro-textura.jpg"
-                alt="Textura macro de la diatomita absorbiendo agua"
+                src="/images/encuentro/encuentro-gris-oscuro-micro-poros.jpg"
+                alt="Detalle de microcapilaridad con alfombrilla DIATOMUSA en baño"
                 width={1200}
                 height={1200}
                 className="h-full w-full object-cover"
@@ -211,8 +211,8 @@ export default function Home() {
 
           <div className="relative overflow-hidden rounded-[var(--radius-base)] shadow-[0_35px_60px_-45px_rgba(56,63,79,0.35)]">
             <Image
-              src="/images/coleccion-azul.jpg"
-              alt="Variantes cromáticas de la alfombrilla DIATOMUSA"
+              src="/images/encuentro/encuentro-variantes-dimensiones-colores.jpg"
+              alt="Variantes de color DIATOMUSA con medidas visibles"
               width={1400}
               height={1200}
               className="h-full w-full object-cover"
@@ -295,8 +295,8 @@ export default function Home() {
 
           <div className="relative overflow-hidden rounded-[var(--radius-base)] shadow-[0_50px_80px_-60px_rgba(0,0,0,0.55)]">
             <Image
-              src="/images/hero-diatomusa.jpg"
-              alt="Alfombrilla DIATOMUSA en un baño con vapor"
+              src="/images/encuentro/encuentro-gris-oscuro-ducha-uso.jpg"
+              alt="Alfombrilla DIATOMUSA gris oscuro en baño contemporáneo"
               width={1200}
               height={900}
               className="h-full w-full object-cover"
@@ -337,8 +337,8 @@ export default function Home() {
               </ul>
               <div className="overflow-hidden rounded-[var(--radius-base)] border border-mist-160/60 shadow-[0_28px_60px_-48px_rgba(24,26,32,0.28)]">
                 <Image
-                  src="/images/limpieza_lijado.jpg"
-                  alt="Limpieza suave de la alfombrilla de diatomita"
+                  src="/images/encuentro/encuentro-gris-oscuro-cuidado-lija-antideslizante.jpg"
+                  alt="Lijado suave y base antideslizante de la alfombrilla DIATOMUSA"
                   width={900}
                   height={900}
                   className="h-full w-full object-cover"
@@ -492,7 +492,7 @@ export default function Home() {
                       loop
                       muted
                       playsInline
-                      poster="/images/hero-diatomusa.jpg"
+                      poster="/images/encuentro/encuentro-gris-oscuro-ducha-uso.jpg"
                       className="h-[220px] w-full object-cover"
                     >
                       <source src={slide.src} type="video/mp4" />

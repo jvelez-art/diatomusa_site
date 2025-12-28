@@ -46,8 +46,8 @@ export default function CienciaPage() {
 
             <div className="overflow-hidden rounded-[var(--radius-base)] border border-mist-160/60 shadow-[0_32px_70px_-48px_rgba(20,22,28,0.4)]">
               <Image
-                src="/images/macro-textura.jpg"
-                alt="Textura macro de la diatomita"
+                src="/images/encuentro/encuentro-gris-oscuro-micro-poros.jpg"
+                alt="Detalle de microcapilaridad en la diatomita"
                 width={1200}
                 height={1000}
                 className="h-full w-full object-cover"

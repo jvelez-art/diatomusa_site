@@ -63,8 +63,8 @@ export default function ProductoPage() {
             </div>
             <div className="overflow-hidden rounded-[var(--radius-base)] border border-mist-160/60 shadow-[0_32px_70px_-48px_rgba(20,22,28,0.4)]">
               <Image
-                src="/images/hero-verde.jpg"
-                alt="Alfombrilla DIATOMUSA en acabado verde"
+                src="/images/encuentro/encuentro-verde-ducha-uso.jpg"
+                alt="Alfombrilla DIATOMUSA en verde a la salida de la ducha"
                 width={1400}
                 height={1100}
                 className="h-full w-full object-cover"
