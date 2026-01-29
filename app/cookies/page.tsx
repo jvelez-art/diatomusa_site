@@ -1,4 +1,13 @@
+"use client";
+
+import { useLanguage } from "@/components/LanguageContext";
+
 export default function CookiesPage() {
+  const { content } = useLanguage();
+  const {
+    pages: { legal: t },
+  } = content;
+
   return (
     <div className="bg-mist-20 text-ink-900">
       <section className="border-b border-mist-160/60 bg-mist-80">
@@ -7,10 +16,10 @@ export default function CookiesPage() {
             Legal
           </p>
           <h1 className="mt-3 text-3xl font-semibold sm:text-4xl">
-            Política de cookies
+            {t.cookiesTitle}
           </h1>
           <p className="mt-4 text-sm text-ink-600">
-            Añadir detalle de cookies, finalidades y opciones de consentimiento según normativa vigente.
+            {t.cookiesCopy}
           </p>
         </div>
       </section>

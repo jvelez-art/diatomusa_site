@@ -1,19 +1,28 @@
+"use client";
+
 import Image from "next/image";
-import { heroStory, tagline } from "@/data/content";
+import { useLanguage } from "@/components/LanguageContext";
 
 export default function HistoriaPage() {
+  const { content } = useLanguage();
+  const {
+    heroStory,
+    tagline,
+    pages: { history: t },
+  } = content;
+
   return (
     <div className="bg-mist-20 text-ink-900">
       <section className="border-b border-mist-160/60 bg-mist-80">
         <div className="mx-auto max-w-6xl px-6 py-16 lg:px-8">
           <p className="text-xs uppercase tracking-[0.3em] text-ink-600">
-            Historia
+            {t.tag}
           </p>
           <h1 className="mt-3 text-3xl font-semibold sm:text-4xl">
-            DIATOMUSA: {tagline}
+            {t.title} {tagline}
           </h1>
           <p className="mt-4 max-w-3xl text-base text-ink-600">
-            Nacimos en el País Vasco, combinando investigación en microcapilaridad con una mirada editorial. Cada pieza es una escena de calma que ordena el baño.
+            {t.copy}
           </p>
         </div>
       </section>
@@ -33,27 +42,12 @@ export default function HistoriaPage() {
         <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 lg:grid-cols-[1fr_1.1fr] lg:px-8">
           <div className="space-y-3">
             <p className="text-xs uppercase tracking-[0.3em]">
-              Origen y método
+              {t.originTitle}
             </p>
             <div className="space-y-3 text-sm text-mist-40/85">
-              <p>
-                La diatomita nace de algas microscópicas cuyo caparazón silíceo
-                se deposita durante siglos hasta formar un mineral ligero y
-                poroso. Esa microestructura es la que hace posible el secado
-                rápido y la sensación de superficie siempre limpia.
-              </p>
-              <p>
-                Nuestro método se apoya en una tradición científica que estudia
-                cómo recolectar, limpiar y preservar esas valvas de sílice sin
-                alterar su porosidad. Seleccionamos el material, lo tratamos
-                para eliminar impurezas y verificamos su desempeño en cada
-                pieza.
-              </p>
-              <p>
-                Equipo con formación en física de nanoestructuras y materiales
-                avanzados. Ensayos internos de absorción, antideslizante y
-                durabilidad. Atención y garantía desde España.
-              </p>
+              <p>{t.originCopy1}</p>
+              <p>{t.originCopy2}</p>
+              <p>{t.originCopy3}</p>
             </div>
           </div>
           <div className="overflow-hidden rounded-[var(--radius-base)] shadow-[0_42px_70px_-50px_rgba(0,0,0,0.55)]">

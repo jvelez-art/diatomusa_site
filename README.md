@@ -67,6 +67,14 @@ Orden y proposito de las secciones:
 - `npm run build`
 - Salida: `out/`
 
+## Previsualizar build estatico (Importante para ver imagenes)
+Si abres los archivos HTML de la carpeta `out/` directamente en el navegador, las imagenes NO se veran correctamente porque las rutas absolutas requieren un servidor web.
+
+Para ver el sitio tal como se vera en produccion:
+1. Ejecutar `npm run build`
+2. Ejecutar `npm run preview`
+3. Abrir la URL que se muestra (usualmente `http://localhost:3000`)
+
 ## Produccion (deploy estatico)
 1. Ejecutar `npm run build`.
 2. Publicar la carpeta `out/` en hosting estatico.

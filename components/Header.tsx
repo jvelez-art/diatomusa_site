@@ -4,10 +4,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu } from "lucide-react";
 import { usePathname } from "next/navigation";
-import { navigation } from "@/data/content";
+import { useLanguage } from "@/components/LanguageContext";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export default function Header() {
   const pathname = usePathname();
+  const { content } = useLanguage();
+  const { navigation } = content;
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-mist-120 bg-mist-20/85 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 md:px-6">
@@ -48,6 +52,7 @@ export default function Header() {
         </div>
 
         <div className="flex items-center gap-3">
+          <LanguageSwitcher />
           <button
             className="rounded-full p-2 text-ink-900 hover:bg-mist-40 md:hidden"
             aria-label="Abrir menú"

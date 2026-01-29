@@ -1,68 +1,64 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { amazonUrl, colorVariants, trustBadges } from "@/data/content";
+import { useLanguage } from "@/components/LanguageContext";
 
 export default function ComprarPage() {
+  const { content } = useLanguage();
+  const {
+    amazonUrl,
+    pages: { shop: t },
+  } = content;
+
   return (
     <div className="bg-mist-20 text-ink-900">
       <section className="border-b border-mist-160/60 bg-mist-80">
         <div className="mx-auto max-w-6xl px-6 py-16 lg:px-8">
-          <p className="text-xs uppercase tracking-[0.3em] text-ink-600">
-            Comprar
-          </p>
-          <h1 className="mt-3 text-3xl font-semibold sm:text-4xl">
-            Compra segura en Amazon
-          </h1>
-          <p className="mt-4 max-w-3xl text-base text-ink-600">
-            Prime, devoluciones ágiles y soporte directo desde España. Elige tu
-            variante y abre en una nueva pestaña para comprar.
-          </p>
-          <div className="mt-5 flex flex-wrap gap-3 text-[11px] uppercase tracking-[0.3em] text-ink-600">
-            {trustBadges.map((badge) => (
-              <span
-                key={badge}
-                className="rounded-full border border-mist-160/60 px-4 py-1"
-              >
-                {badge}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-mist-20">
-        <div className="mx-auto max-w-6xl px-6 py-14 lg:px-8">
-          <h2 className="text-2xl font-semibold">Variantes disponibles</h2>
-          <p className="mt-2 text-sm text-ink-600">
-            Usa enlaces con UTM cuando estén disponibles; por ahora abre la
-            búsqueda general en Amazon.
-          </p>
-          <div className="mt-6 grid gap-6 sm:grid-cols-2">
-            {colorVariants.map((variant) => (
-              <Link
-                key={variant.name}
-                href={amazonUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group rounded-[18px] border border-mist-160/60 bg-white/80 p-4 text-sm font-medium text-ink-700 transition hover:-translate-y-0.5 hover:border-rose-220/70"
-              >
-                <div className="flex h-40 items-center justify-center overflow-hidden rounded-[14px] border border-mist-160/50 bg-mist-20 p-3">
-                  <Image
-                    src={variant.image}
-                    alt={`Alfombrilla DIATOMUSA ${variant.name}`}
-                    width={800}
-                    height={600}
-                    className="h-full w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
-                  />
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+            <div className="order-2 lg:order-1">
+              <div className="overflow-hidden rounded-[var(--radius-base)] border border-mist-160/60 shadow-[0_32px_70px_-48px_rgba(20,22,28,0.4)]">
+                <Image
+                  src="/images/encuentro/encuentro-rosa-ducha-uso.jpg"
+                  alt="DIATOMUSA Encuentro embalaje y producto"
+                  width={1200}
+                  height={1200}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            </div>
+            <div className="order-1 space-y-6 lg:order-2">
+              <p className="text-xs uppercase tracking-[0.3em] text-ink-600">
+                {t.tag}
+              </p>
+              <h1 className="text-3xl font-semibold sm:text-4xl">
+                {t.title}
+              </h1>
+              <ul className="space-y-3 text-base text-ink-600">
+                {t.benefitsList.map((benefit) => (
+                  <li key={benefit} className="flex items-start gap-3">
+                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-rose-220 flex-shrink-0" />
+                    <span>{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="pt-4">
+                <Link
+                  href={amazonUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-rose-220 px-8 py-3 text-sm font-serif font-semibold uppercase tracking-[0.12em] text-ink-900 shadow-[0_20px_45px_-24px_rgba(176,117,98,0.55)] transition hover:-translate-y-0.5 hover:bg-rose-260"
+                >
+                  {t.amazonButton}
+                </Link>
+                <div className="mt-6 rounded-[16px] border border-mist-160/60 bg-white/60 p-4 text-xs text-ink-500">
+                  <p className="font-semibold uppercase tracking-wider mb-1">
+                    {t.secureTitle}
+                  </p>
+                  {t.secureCopy}
                 </div>
-                <div className="mt-4 flex items-center justify-between">
-                  <span className="text-base font-semibold">{variant.name}</span>
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-rose-220">
-                    Abrir Amazon
-                  </span>
-                </div>
-              </Link>
-            ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>

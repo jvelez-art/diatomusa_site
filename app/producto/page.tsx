@@ -1,34 +1,39 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import {
-  amazonUrl,
-  benefits,
-  colorVariants,
-  howItWorks,
-  tagline,
-} from "@/data/content";
+import { useLanguage } from "@/components/LanguageContext";
 
 export default function ProductoPage() {
+  const { content } = useLanguage();
+  const {
+    amazonUrl,
+    benefits,
+    colorVariants,
+    howItWorks,
+    tagline,
+    pages: { product: t },
+  } = content;
+
   return (
     <div className="bg-mist-20 text-ink-900">
       <section className="border-b border-mist-160/60 bg-mist-80">
         <div className="mx-auto max-w-6xl px-6 py-16 lg:px-8">
           <p className="text-xs uppercase tracking-[0.3em] text-ink-600">
-            Producto
+            {t.tag}
           </p>
           <h1 className="mt-3 text-3xl font-semibold sm:text-4xl">
-            Alfombrilla de diatomita DIATOMUSA: {tagline}
+            {t.title} {tagline}
           </h1>
           <p className="mt-4 text-base text-ink-600">
-            Secado visible en minutos, base antideslizante y diseño sereno.
-            Ingeniería de materiales aplicada al baño cotidiano.
+            {t.copy}
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link
               href="/ciencia"
               className="text-sm font-semibold text-ink-700 underline-offset-6 hover:underline"
             >
-              Ver la ciencia
+              {t.link}
             </Link>
           </div>
         </div>
@@ -38,7 +43,7 @@ export default function ProductoPage() {
         <div className="mx-auto max-w-6xl px-6 py-14 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
             <div className="space-y-6">
-              <h2 className="text-2xl font-semibold">Beneficios clave</h2>
+              <h2 className="text-2xl font-semibold">{t.benefitsTitle}</h2>
               <ul className="grid gap-5">
                 {benefits.map((benefit) => (
                   <li
@@ -71,12 +76,11 @@ export default function ProductoPage() {
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <div className="space-y-4">
               <p className="text-xs uppercase tracking-[0.3em] text-ink-700">
-                Variantes
+                {t.variantsTag}
               </p>
-              <h2 className="text-2xl font-semibold">Colores reales</h2>
+              <h2 className="text-2xl font-semibold">{t.variantsTitle}</h2>
               <p className="text-sm text-ink-600">
-                Selecciona la variante que mejor dialogue con tu baño. Todas
-                integran la misma microcapilaridad y base antideslizante.
+                {t.variantsCopy}
               </p>
               <div className="grid gap-3 sm:grid-cols-2">
                 {colorVariants.map((variant) => (
@@ -117,7 +121,7 @@ export default function ProductoPage() {
 
       <section className="bg-mist-20">
         <div className="mx-auto max-w-6xl px-6 py-14 lg:px-8">
-          <h2 className="text-2xl font-semibold">Cómo funciona</h2>
+          <h2 className="text-2xl font-semibold">{t.howItWorksTitle}</h2>
           <div className="mt-6 grid gap-4 sm:grid-cols-3">
             {howItWorks.map((item, index) => (
               <div
@@ -139,9 +143,9 @@ export default function ProductoPage() {
 
       <section className="border-t border-mist-160/60 bg-ink-900 text-mist-40">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-12 lg:px-8">
-          <h2 className="text-2xl font-semibold">Listo para tu baño</h2>
+          <h2 className="text-2xl font-semibold">{t.ctaTitle}</h2>
           <p className="text-sm text-mist-40/80">
-            Prime, devoluciones fáciles y atención desde España. Compra segura.
+            {t.ctaCopy}
           </p>
         </div>
       </section>
@@ -153,7 +157,7 @@ export default function ProductoPage() {
           rel="noopener noreferrer"
           className="flex items-center gap-2 rounded-full bg-rose-220 px-5 py-2 text-xs font-serif font-semibold uppercase tracking-[0.12em] text-ink-900 shadow-[0_20px_45px_-24px_rgba(176,117,98,0.55)] transition hover:-translate-y-0.5 hover:bg-rose-260"
         >
-          Comprar en Amazon
+          {t.ctaButton}
         </Link>
       </div>
     </div>

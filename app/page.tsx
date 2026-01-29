@@ -1,22 +1,28 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import {
-  amazonUrl,
-  benefits,
-  careSteps,
-  colorVariants,
-  faqs,
-  guarantee,
-  heroStory,
-  howItWorks,
-  pillars,
-  reviews,
-  tagline,
-  trustBadges,
-  videos,
-} from "@/data/content";
+import { useLanguage } from "@/components/LanguageContext";
 
 export default function Home() {
+  const { content } = useLanguage();
+  const {
+    tagline,
+    amazonUrl,
+    heroStory,
+    trustBadges,
+    videos,
+    benefits,
+    howItWorks,
+    colorVariants,
+    pillars,
+    careSteps,
+    reviews,
+    guarantee,
+    faqs,
+    pages: { home: t },
+  } = content;
+
   return (
     <div className="bg-mist-20 text-ink-900">
       <section
@@ -29,7 +35,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-6xl items-start gap-12 px-6 py-20 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-8 lg:py-28">
           <div className="space-y-7">
             <div className="inline-flex items-center gap-3 rounded-full bg-white/60 px-4 py-2 text-xs uppercase tracking-[0.22em] text-ink-600 shadow-[0_22px_40px_-30px_rgba(20,22,28,0.35)]">
-              <span>Alfombra en piedra de diatomita</span>
+              <span>{t.heroTag}</span>
               <span className="h-1 w-1 rounded-full bg-rose-220" />
               <span>DIATOMUSA</span>
             </div>
@@ -37,7 +43,7 @@ export default function Home() {
               {tagline}
             </p>
             <h1 className="font-serif text-[42px] font-bold leading-tight tracking-[0.06em] sm:text-[48px] text-ink-900">
-              El Encuentro.
+              {t.heroHeadline}
             </h1>
 
             <div className="space-y-4 max-w-xl">
@@ -48,7 +54,7 @@ export default function Home() {
                   fontKerning: "normal",
                 }}
               >
-                Arte que desvanece el mojar de tus pasos
+                {t.heroSubheadline}
               </h3>
               {heroStory.paragraphs.map((paragraph) => (
                 <p key={paragraph} className="text-[17px] leading-relaxed text-ink-500">
@@ -62,7 +68,7 @@ export default function Home() {
                 href="/ciencia"
                 className="text-sm font-semibold text-ink-700 underline-offset-8 hover:underline"
               >
-                Conocer la ciencia
+                {t.heroLink}
               </Link>
             </div>
 
@@ -100,18 +106,16 @@ export default function Home() {
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <div className="space-y-4">
               <p className="text-xs uppercase tracking-[0.32em] text-ink-500">
-                El Encuentro en uso real
+                {t.videoSection.tag}
               </p>
               <h2 className="text-3xl font-semibold sm:text-4xl">
-                Diseño, textura y secado visible.
+                {t.videoSection.title}
               </h2>
               <p className="text-sm text-ink-500 sm:text-base">
-                Un vistazo directo a cómo la piedra absorbe y se regenera en
-                minutos, sin perder la calma del diseño.
+                {t.videoSection.copy1}
               </p>
               <p className="text-sm text-ink-500 sm:text-base">
-                Este video abre la historia del producto y muestra su
-                funcionamiento de forma clara y completa.
+                {t.videoSection.copy2}
               </p>
             </div>
             <div className="overflow-hidden rounded-[2rem] border border-mist-160/50 bg-white/70 shadow-[0_40px_90px_-60px_rgba(27,29,36,0.35)]">
@@ -144,14 +148,13 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-xs uppercase tracking-[0.3em] text-ink-500">
-              Beneficios clave
+              {t.benefitsSection.tag}
             </p>
             <h2 className="mt-4 text-3xl font-semibold sm:text-4xl">
-              Confort visible, higiene tangible y diseño que ordena el espacio.
+              {t.benefitsSection.title}
             </h2>
             <p className="mt-4 text-base text-ink-500">
-              Cada detalle responde a pruebas de absorción, adherencia y
-              durabilidad para que el baño quede seco y sereno tras cada uso.
+              {t.benefitsSection.copy}
             </p>
           </div>
 
@@ -177,15 +180,13 @@ export default function Home() {
           <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <div className="space-y-5">
               <p className="text-xs uppercase tracking-[0.3em] text-ink-500">
-                Cómo funciona
+                {t.howItWorksSection.tag}
               </p>
               <h2 className="text-3xl font-semibold sm:text-4xl">
-                Microcapilaridad que respira y seca en minutos.
+                {t.howItWorksSection.title}
               </h2>
               <p className="text-base text-ink-500">
-                Tecnología natural de la diatomita: absorbe al contacto, dispersa
-                la humedad y se regenera con cada ventilación. Una pieza de
-                piedra que ordena visualmente el baño.
+                {t.howItWorksSection.copy}
               </p>
 
               <div className="grid gap-4 sm:grid-cols-3">
@@ -223,15 +224,13 @@ export default function Home() {
         <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:px-8">
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-ink-700">
-              Colecciones cromáticas
+              {t.colorsSection.tag}
             </p>
             <h2 className="mt-5 text-3xl font-semibold sm:text-4xl">
-              Tonos serenos inspirados en minerales y paisajes acuáticos.
+              {t.colorsSection.title}
             </h2>
             <p className="mt-4 text-base text-ink-500">
-              Rosa, verde, gris oscuro y la colección completa para baños
-              minimalistas o cálidos. Consulta las variantes en Amazon y elige
-              la que dialoga mejor con tu espacio.
+              {t.colorsSection.copy}
             </p>
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               {colorVariants.map((variant) => (
@@ -262,15 +261,13 @@ export default function Home() {
         <div className="mx-auto grid max-w-6xl gap-14 px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:px-8">
           <div className="space-y-6">
             <p className="text-xs uppercase tracking-[0.3em] text-ink-700">
-              Material & ciencia
+              {t.scienceSection.tag}
             </p>
             <h2 className="text-3xl font-semibold sm:text-4xl">
-              Ingeniería de materiales al servicio de la serenidad diaria.
+              {t.scienceSection.title}
             </h2>
             <p className="text-base text-ink-500">
-              Tratamiento térmico, poros calibrados y control dimensional para
-              lograr absorción homogénea y estabilidad bajo los pies. La
-              microcapilaridad es nuestro lenguaje estético.
+              {t.scienceSection.copy}
             </p>
             <div className="grid gap-6 sm:grid-cols-3">
               {pillars.map((pillar) => (
@@ -290,19 +287,18 @@ export default function Home() {
           <div className="rounded-[var(--radius-base)] border border-mist-160/60 bg-mist-20 p-6 shadow-[0_28px_60px_-48px_rgba(24,26,32,0.28)]">
             <div className="space-y-3">
               <h3 className="text-sm font-semibold uppercase tracking-[0.26em] text-ink-700">
-                Pruebas internas
+                {t.scienceSection.internalTests}
               </h3>
               <ul className="space-y-2 text-sm text-ink-500">
-                <li>• Absorción y secado en minutos.</li>
-                <li>• Estabilidad antideslizante en superficies lisas.</li>
-                <li>• Resistencia a manchas y limpieza rápida.</li>
-                <li>• Durabilidad tras ciclos de uso y ventilación.</li>
+                {t.scienceSection.testsList.map((test) => (
+                  <li key={test}>{test}</li>
+                ))}
               </ul>
               <Link
                 href="/ciencia"
                 className="text-sm font-semibold text-ink-700 underline-offset-6 hover:underline"
               >
-                Ver más sobre la materia
+                {t.scienceSection.link}
               </Link>
             </div>
           </div>
@@ -312,28 +308,23 @@ export default function Home() {
       <section className="border-y border-ink-700/25 bg-ink-900 text-mist-40">
         <div className="mx-auto grid max-w-6xl gap-12 px-6 py-[72px] lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-8">
           <div className="space-y-4 text-mist-40">
-            <p className="text-xs uppercase tracking-[0.3em]">Historia</p>
+            <p className="text-xs uppercase tracking-[0.3em]">{t.historySection.tag}</p>
             <h2 className="text-3xl font-semibold sm:text-4xl">
-              Ciencia, arte y serenidad en el País Vasco.
+              {t.historySection.title}
             </h2>
             <div className="space-y-4 text-base text-mist-40/85">
               <p>
-                Nacimos en el País Vasco, uniendo investigación en
-                microcapilaridad con una mirada editorial del diseño. La
-                diatomita, formada por diatomeas, nos inspira por su porosidad
-                natural y su capacidad de absorber sin esfuerzo.
+                {t.historySection.copy1}
               </p>
               <p>
-                Transformamos ese conocimiento en piezas serenas: secan en
-                minutos, ordenan el espacio y convierten el baño en un ritual
-                silencioso de bienestar.
+                {t.historySection.copy2}
               </p>
             </div>
             <Link
               href="/historia"
               className="inline-flex items-center gap-2 text-sm font-semibold text-rose-160 underline-offset-8 hover:underline"
             >
-              Leer el manifiesto
+              {t.historySection.link}
             </Link>
           </div>
 
@@ -354,14 +345,13 @@ export default function Home() {
           <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
             <div className="space-y-4">
               <p className="text-xs uppercase tracking-[0.3em] text-ink-700">
-                Uso y cuidado
+                {t.careSection.tag}
               </p>
               <h2 className="text-3xl font-semibold sm:text-4xl">
-                Rutina sencilla para prolongar su vida útil.
+                {t.careSection.title}
               </h2>
               <p className="text-base text-ink-500">
-                Mantenimiento breve, sin detergentes agresivos. La piedra se
-                regenera con ventilación y limpieza suave.
+                {t.careSection.copy}
               </p>
               <ul className="mt-6 grid gap-4 sm:grid-cols-2">
                 {careSteps.map((step, index) => (
@@ -394,10 +384,10 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-xs uppercase tracking-[0.3em] text-ink-700">
-              Reseñas verificadas
+              {t.reviewsSection.tag}
             </p>
             <h2 className="mt-4 text-3xl font-semibold sm:text-4xl">
-              Las personas que conviven con DIATOMUSA notan la diferencia.
+              {t.reviewsSection.title}
             </h2>
           </div>
 
@@ -420,7 +410,7 @@ export default function Home() {
               href="/opiniones"
               className="text-sm font-semibold text-ink-700 underline-offset-6 hover:underline"
             >
-              Leer más opiniones
+              {t.reviewsSection.link}
             </Link>
           </div>
         </div>
@@ -431,7 +421,7 @@ export default function Home() {
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <div className="space-y-4">
               <p className="text-xs uppercase tracking-[0.3em] text-ink-700">
-                Garantía y soporte
+                {t.warrantySection.tag}
               </p>
               <h2 className="text-3xl font-semibold sm:text-4xl">
                 {guarantee.headline}
@@ -451,7 +441,7 @@ export default function Home() {
                 href="/garantia"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-ink-700 underline-offset-6 hover:underline"
               >
-                Detalles de garantía y FAQ
+                {t.warrantySection.link}
               </Link>
             </div>
 
@@ -477,15 +467,13 @@ export default function Home() {
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <div className="space-y-4">
               <p className="text-xs uppercase tracking-[0.32em] text-mist-40/70">
-                Sensación, ambiente y detalle
+                {t.atmosphereSection.tag}
               </p>
               <h2 className="text-3xl font-semibold sm:text-4xl">
-                Una atmósfera serena para el ritual diario.
+                {t.atmosphereSection.title}
               </h2>
               <p className="text-sm text-mist-40/80 sm:text-base">
-                Como continuación del relato, este clip sitúa la pieza en un
-                baño elegante, con luz suave y materiales nobles que realzan su
-                presencia.
+                {t.atmosphereSection.copy}
               </p>
             </div>
 
@@ -521,7 +509,7 @@ export default function Home() {
           rel="noopener noreferrer"
           className="flex items-center gap-2 rounded-full bg-rose-220 px-5 py-2 text-xs font-serif font-semibold uppercase tracking-[0.12em] text-ink-900 shadow-[0_20px_45px_-24px_rgba(176,117,98,0.55)] transition hover:-translate-y-0.5 hover:bg-rose-260"
         >
-          Comprar en Amazon
+          {t.cta}
         </Link>
       </div>
     </div>

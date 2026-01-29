@@ -1,47 +1,62 @@
+"use client";
+
 import Image from "next/image";
-import { careSteps } from "@/data/content";
+import { useLanguage } from "@/components/LanguageContext";
 
 export default function CuidadoPage() {
+  const { content } = useLanguage();
+  const {
+    careSteps,
+    pages: { care: t },
+  } = content;
+
   return (
     <div className="bg-mist-20 text-ink-900">
       <section className="border-b border-mist-160/60 bg-mist-80">
         <div className="mx-auto max-w-6xl px-6 py-16 lg:px-8">
           <p className="text-xs uppercase tracking-[0.3em] text-ink-600">
-            Uso y cuidado
+            {t.tag}
           </p>
           <h1 className="mt-3 text-3xl font-semibold sm:text-4xl">
-            Rutina breve para mantener el desempeño
+            {t.title}
           </h1>
           <p className="mt-4 max-w-3xl text-base text-ink-600">
-            Ventilar, limpiar suave y evitar inmersión prolongada. La piedra se
-            regenera con cada ciclo de secado.
+            {t.copy}
           </p>
         </div>
       </section>
 
       <section className="bg-mist-20">
         <div className="mx-auto max-w-6xl px-6 py-14 lg:px-8">
-          <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-start">
-            <ul className="grid gap-6 sm:grid-cols-2">
-              {careSteps.map((step, index) => (
-                <li
-                  key={step}
-                  className="flex flex-col gap-3 rounded-[var(--radius-base)] border border-mist-160/55 bg-mist-20/90 p-6"
-                >
-                  <span className="numeric text-3xl text-accent-500">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <p className="text-sm text-ink-500">{step}</p>
-                </li>
-              ))}
-            </ul>
-            <div className="flex items-center justify-center overflow-hidden rounded-[var(--radius-base)] border border-mist-160/60 bg-white/70 p-4 shadow-[0_32px_70px_-48px_rgba(20,22,28,0.4)]">
+          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+            <div className="space-y-6">
+              <ul className="grid gap-6">
+                {careSteps.map((step, index) => (
+                  <li
+                    key={step}
+                    className="flex flex-col gap-2 rounded-[20px] border border-mist-160/60 bg-white/70 p-5"
+                  >
+                    <span className="numeric text-2xl text-accent-500">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <p className="text-sm text-ink-600">{step}</p>
+                  </li>
+                ))}
+              </ul>
+              <div className="rounded-[20px] border border-red-100 bg-red-50/50 p-5 text-sm text-ink-700">
+                <span className="block font-semibold text-red-800 uppercase tracking-widest text-xs mb-2">
+                  {t.warningTitle}
+                </span>
+                {t.warningCopy}
+              </div>
+            </div>
+            <div className="overflow-hidden rounded-[var(--radius-base)] border border-mist-160/60 shadow-[0_32px_70px_-48px_rgba(20,22,28,0.4)]">
               <Image
                 src="/images/encuentro/encuentro-gris-oscuro-cuidado-lija-antideslizante.jpg"
-                alt="Lijado suave y base antideslizante de la alfombrilla DIATOMUSA"
+                alt="Mantenimiento de la alfombrilla DIATOMUSA"
                 width={1200}
-                height={900}
-                className="h-auto w-full object-contain"
+                height={1200}
+                className="h-full w-full object-cover"
               />
             </div>
           </div>

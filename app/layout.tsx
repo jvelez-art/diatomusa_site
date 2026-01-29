@@ -64,6 +64,7 @@ export const metadata: Metadata = {
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { LanguageProvider } from "@/components/LanguageContext";
 
 export default function RootLayout({
   children,
@@ -71,15 +72,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" suppressHydrationWarning>
       <body
         className={`${playfair.variable} ${manrope.variable} ${robotoMono.variable} antialiased bg-mist-20 text-ink-900 flex flex-col min-h-screen`}
+        suppressHydrationWarning
       >
-        <Header />
-        <main className="flex-1">
-          {children}
-        </main>
-        <Footer />
+        <LanguageProvider>
+          <Header />
+          <main className="flex-1">
+            {children}
+          </main>
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );

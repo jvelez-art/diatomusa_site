@@ -1,4 +1,13 @@
+"use client";
+
+import { useLanguage } from "@/components/LanguageContext";
+
 export default function AvisoLegalPage() {
+  const { content } = useLanguage();
+  const {
+    pages: { legal: t },
+  } = content;
+
   return (
     <div className="bg-mist-20 text-ink-900">
       <section className="border-b border-mist-160/60 bg-mist-80">
@@ -7,10 +16,10 @@ export default function AvisoLegalPage() {
             Legal
           </p>
           <h1 className="mt-3 text-3xl font-semibold sm:text-4xl">
-            Aviso legal
+            {t.legalNoticeTitle}
           </h1>
           <p className="mt-4 text-sm text-ink-600">
-            Contenido legal pendiente de completar según los datos oficiales de la empresa.
+            {t.legalNoticeCopy}
           </p>
         </div>
       </section>

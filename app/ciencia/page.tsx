@@ -1,22 +1,29 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
-import { howItWorks, pillars } from "@/data/content";
+import { useLanguage } from "@/components/LanguageContext";
 
 export default function CienciaPage() {
+  const { content } = useLanguage();
+  const {
+    howItWorks,
+    pillars,
+    pages: { science: t },
+  } = content;
+
   return (
     <div className="bg-mist-20 text-ink-900">
       <section className="border-b border-mist-160/60 bg-mist-80">
         <div className="mx-auto max-w-6xl px-6 py-16 lg:px-8">
           <p className="text-xs uppercase tracking-[0.3em] text-ink-600">
-            Ciencia & material
+            {t.tag}
           </p>
           <h1 className="mt-3 text-3xl font-semibold sm:text-4xl">
-            Microcapilaridad y diatomita: ciencia que se siente bajo los pies.
+            {t.title}
           </h1>
           <p className="mt-4 max-w-3xl text-base text-ink-600">
-            Tratamiento térmico, poros calibrados y control dimensional. La
-            piedra absorbe, dispersa y seca en minutos, manteniendo el baño
-            ordenado y seguro.
+            {t.copy}
           </p>
         </div>
       </section>
@@ -25,7 +32,7 @@ export default function CienciaPage() {
         <div className="mx-auto max-w-6xl px-6 py-14 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
             <div className="space-y-6">
-              <h2 className="text-2xl font-semibold">Cómo funciona</h2>
+              <h2 className="text-2xl font-semibold">{t.howItWorksTitle}</h2>
               <div className="grid gap-4 sm:grid-cols-3">
                 {howItWorks.map((item, index) => (
                   <div
@@ -59,7 +66,7 @@ export default function CienciaPage() {
 
       <section className="border-t border-mist-160/60 bg-mist-120">
         <div className="mx-auto max-w-6xl px-6 py-14 lg:px-8">
-          <h2 className="text-2xl font-semibold">Pilares de producto</h2>
+          <h2 className="text-2xl font-semibold">{t.pillarsTitle}</h2>
           <div className="mt-6 grid gap-6 sm:grid-cols-3">
             {pillars.map((pillar) => (
               <div
@@ -78,18 +85,17 @@ export default function CienciaPage() {
 
       <section className="bg-mist-20">
         <div className="mx-auto max-w-6xl px-6 py-14 lg:px-8">
-          <h2 className="text-2xl font-semibold">Datos de ensayo internos</h2>
+          <h2 className="text-2xl font-semibold">{t.testsTitle}</h2>
           <div className="mt-6 space-y-3 rounded-[20px] border border-mist-160/60 bg-white/80 p-6 text-sm text-ink-600">
-            <p>• Absorción visible: superficie seca en minutos tras el uso.</p>
-            <p>• Estabilidad: base antideslizante probada en suelos lisos.</p>
-            <p>• Manchas: resistencia a manchas comunes con limpieza ligera.</p>
-            <p>• Durabilidad: ciclos de ventilación y lijado fino sin degradar la pieza.</p>
+            {t.testsList.map((test) => (
+              <p key={test}>{test}</p>
+            ))}
           </div>
           <Link
             href="/producto"
             className="mt-6 inline-flex text-sm font-semibold text-ink-700 underline-offset-6 hover:underline"
           >
-            Volver al producto
+            {t.backLink}
           </Link>
         </div>
       </section>
