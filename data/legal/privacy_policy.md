@@ -7,7 +7,7 @@ En **DIATOMUSA** (en adelante, el "Sitio Web"), respetamos su privacidad y nos c
 ## 1. Responsable del Tratamiento
 
 * **Identidad:** Samuel
-* **NIF/CIF:** [NÚMERO DE IDENTIFICACIÓN FISCAL]
+* **NIF/CIF:** 041072099001
 * **Dirección Postal:** Calle Arroka 2-6C, 20006
 * **Correo Electrónico:** jvelez@diatomusa.com / samuel@diatomusa.com
 * **Actividad:** Venta de productos de decoración y baño a través de Amazon FBA.

@@ -5,7 +5,7 @@
 En cumplimiento con el deber de información recogido en el artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSICE), se exponen los siguientes datos:
 
 *   **Titular:** Samuel
-*   **NIF:** [NÚMERO DE IDENTIFICACIÓN FISCAL]
+*   **NIF:** 041072099001
 *   **Domicilio:** Calle Arroka 2-6C, 20006
 *   **Correo de contacto:** jvelez@diatomusa.com
 *   **Sitio Web:** www.diatomusa.com

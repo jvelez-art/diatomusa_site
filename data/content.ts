@@ -20,6 +20,7 @@ export type Content = {
     legal: string;
     rights: string;
     designedIn: string;
+    warrantyLabel: string;
   };
   foundersSection: {
     tag: string;
@@ -208,7 +209,6 @@ const es: Content = {
     { label: "Uso y cuidado", href: "/cuidado" },
     { label: "Opiniones", href: "/opiniones" },
     { label: "Comprar", href: "/comprar" },
-    { label: "Garantía", href: "/garantia" },
   ],
   trustBadges: ["Prime", "Garantía 12m", "Atención local"],
   benefits: [
@@ -357,6 +357,7 @@ const es: Content = {
     legal: "Legal",
     rights: "Todos los derechos reservados.",
     designedIn: "Diseñado en España.",
+    warrantyLabel: "Garantía",
   },
   foundersSection: {
     tag: "Nuestra Esencia",
@@ -562,7 +563,6 @@ const en: Content = {
     { label: "Care", href: "/cuidado" },
     { label: "Reviews", href: "/opiniones" },
     { label: "Shop", href: "/comprar" },
-    { label: "Warranty", href: "/garantia" },
   ],
   trustBadges: ["Prime", "12m Warranty", "Local Support"],
   benefits: [
@@ -711,6 +711,7 @@ const en: Content = {
     legal: "Legal",
     rights: "All rights reserved.",
     designedIn: "Designed in Spain.",
+    warrantyLabel: "Warranty",
   },
   foundersSection: {
     tag: "Our Essence",

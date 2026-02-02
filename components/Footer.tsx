@@ -43,7 +43,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/garantia" className="hover:text-rose-260">
-                  {content.navigation.find((n) => n.href === "/garantia")?.label || "Garantía"}
+                  {footer.warrantyLabel}
                 </Link>
               </li>
               <li>
