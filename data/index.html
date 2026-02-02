@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV – Javier Vélez Simanca</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="masthead">
+      <div>
+        <p class="eyebrow" data-i18n-key="cvSystem">Curriculum system</p>
+        <h1 id="personName">Javier Vélez</h1>
+        <p id="personTitle" class="lead">Spintronics & Nonlinear Dynamics</p>
+        <p id="personLocation" class="muted">Donostia–San Sebastián, Spain</p>
+      </div>
+      <div class="masthead__controls">
+        <label class="control">
+          <span data-i18n-key="variant">Variant</span>
+          <select id="variantSelect"></select>
+        </label>
+        <button id="langToggle" class="control button" type="button">ES</button>
+      </div>
+    </header>
+
+    <section id="summarySection" class="card summary-card"></section>
+
+    <section id="highlightSection" class="card highlights"></section>
+
+    <div class="layout">
+      <section id="experienceSection" class="card stack"></section>
+      <aside id="asideSection" class="stack"></aside>
+    </div>
+
+    <section id="publicationSection" class="card publications"></section>
+  </div>
+
+  <script type="module" src="assets/js/script.js"></script>
+</body>
+</html>
