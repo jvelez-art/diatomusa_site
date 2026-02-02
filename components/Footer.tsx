@@ -58,17 +58,17 @@ export default function Footer() {
             <h4 className="mb-4 font-semibold text-ink-900">{footer.legal}</h4>
             <ul className="space-y-3 text-sm text-ink-500">
               <li>
-                <Link href="/aviso-legal" className="hover:text-rose-260">
+                <Link href="/legal/legal_notice" className="hover:text-rose-260">
                   Aviso Legal
                 </Link>
               </li>
               <li>
-                <Link href="/privacidad" className="hover:text-rose-260">
+                <Link href="/legal/privacy_policy" className="hover:text-rose-260">
                   Privacidad
                 </Link>
               </li>
               <li>
-                <Link href="/cookies" className="hover:text-rose-260">
+                <Link href="/legal/cookies_policy" className="hover:text-rose-260">
                   Cookies
                 </Link>
               </li>

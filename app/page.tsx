@@ -11,6 +11,7 @@ import CareSection from "@/components/home/CareSection";
 import ReviewsSection from "@/components/home/ReviewsSection";
 import WarrantyFaqSection from "@/components/home/WarrantyFaqSection";
 import AtmosphereSection from "@/components/home/AtmosphereSection";
+import FoundersSection from "@/components/home/FoundersSection";
 import StickyCTA from "@/components/home/StickyCTA";
 
 export default function Home() {
@@ -27,6 +28,7 @@ export default function Home() {
       <ReviewsSection />
       <WarrantyFaqSection />
       <AtmosphereSection />
+      <FoundersSection />
       <StickyCTA />
     </div>
   );

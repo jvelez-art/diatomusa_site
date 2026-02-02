@@ -21,6 +21,46 @@ export type Content = {
     rights: string;
     designedIn: string;
   };
+  foundersSection: {
+    tag: string;
+    title: string;
+    subtitle: string;
+    contactButton: string;
+    linkedinButton: string;
+  };
+  modals: {
+    waitlist: {
+      tag: string;
+      title: string;
+      subtitle: string;
+      emailPlaceholder: string;
+      privacyLabel: string;
+      submitButton: string;
+      successTitle: string;
+      successMessage: string;
+    };
+    contact: {
+      tag: string;
+      title: string;
+      subtitle: string;
+      namePlaceholder: string;
+      emailPlaceholder: string;
+      messagePlaceholder: string;
+      submitButton: string;
+      successTitle: string;
+      successMessage: string;
+    };
+    errors: {
+      required: string;
+      connection: string;
+      generic: string;
+    };
+    loading: string;
+  };
+  smartCTA: {
+    live: string;
+    preLaunch: string;
+  };
   pages: {
     home: {
       heroTag: string;
@@ -318,6 +358,46 @@ const es: Content = {
     rights: "Todos los derechos reservados.",
     designedIn: "Diseñado en España.",
   },
+  foundersSection: {
+    tag: "Nuestra Esencia",
+    title: "Mentes detrás de DIATOMUSA",
+    subtitle: "La unión entre ciencia de materiales y visión estratégica.",
+    contactButton: "Contactar",
+    linkedinButton: "LinkedIn",
+  },
+  modals: {
+    waitlist: {
+      tag: "Lista de Espera",
+      title: "Llegamos pronto a España 🇪🇸",
+      subtitle: "Sé el primero en saber cuándo aterrizamos y recibe acceso prioritario a nuestro stock limitado.",
+      emailPlaceholder: "tu@correo.com",
+      privacyLabel: "Acepto recibir notificaciones sobre el lanzamiento. Respetamos tu privacidad y no hacemos spam.",
+      submitButton: "Unirme a la lista",
+      successTitle: "¡Estás dentro!",
+      successMessage: "Te avisaremos en cuanto estemos disponibles.",
+    },
+    contact: {
+      tag: "Contacto Directo",
+      title: "Mensaje para {name}",
+      subtitle: "Escribe tu mensaje y le llegará directamente a su bandeja de entrada.",
+      namePlaceholder: "Tu nombre",
+      emailPlaceholder: "Tu email",
+      messagePlaceholder: "Hola {name}, quería comentarte...",
+      submitButton: "Enviar Mensaje",
+      successTitle: "Mensaje Enviado",
+      successMessage: "{name} lo recibirá en breve. Gracias por contactar.",
+    },
+    errors: {
+      required: "Por favor, completa todos los campos.",
+      connection: "Error de conexión. Inténtalo de nuevo.",
+      generic: "Ocurrió un error.",
+    },
+    loading: "Enviando...",
+  },
+  smartCTA: {
+    live: "Comprar en Amazon",
+    preLaunch: "Notificarme del Lanzamiento",
+  },
   pages: {
     home: {
       heroTag: "Alfombra en piedra de diatomita",
@@ -457,7 +537,7 @@ const es: Content = {
       subtitle: "Cobertura",
       contactTitle: "Contacto directo",
       contactCopy:
-        "Si tienes alguna incidencia o consulta específica, escríbenos directamente. Respondemos en menos de 24 horas laborables.",
+        "Si tienes alguna incidencia o consulta específica, escríbenos directamente a jvelez@diatomusa.com. Respondemos en menos de 24 horas laborables.",
       faqTitle: "Preguntas frecuentes",
     },
     legal: {
@@ -632,6 +712,46 @@ const en: Content = {
     rights: "All rights reserved.",
     designedIn: "Designed in Spain.",
   },
+  foundersSection: {
+    tag: "Our Essence",
+    title: "Minds behind DIATOMUSA",
+    subtitle: "The union between materials science and strategic vision.",
+    contactButton: "Contact",
+    linkedinButton: "LinkedIn",
+  },
+  modals: {
+    waitlist: {
+      tag: "Waitlist",
+      title: "Arriving soon in Spain 🇪🇸",
+      subtitle: "Be the first to know when we land and get priority access to our limited stock.",
+      emailPlaceholder: "you@email.com",
+      privacyLabel: "I accept receiving notifications about the launch. We respect your privacy and do not spam.",
+      submitButton: "Join the list",
+      successTitle: "You're in!",
+      successMessage: "We will notify you as soon as we are available.",
+    },
+    contact: {
+      tag: "Direct Contact",
+      title: "Message for {name}",
+      subtitle: "Write your message and it will arrive directly to their inbox.",
+      namePlaceholder: "Your Name",
+      emailPlaceholder: "Your Email",
+      messagePlaceholder: "Hi {name}, I wanted to tell you...",
+      submitButton: "Send Message",
+      successTitle: "Message Sent",
+      successMessage: "{name} will receive it shortly. Thanks for contacting.",
+    },
+    errors: {
+      required: "Please complete all fields.",
+      connection: "Connection error. Please try again.",
+      generic: "An error occurred.",
+    },
+    loading: "Sending...",
+  },
+  smartCTA: {
+    live: "Buy on Amazon",
+    preLaunch: "Notify Me of Launch",
+  },
   pages: {
     home: {
       heroTag: "Diatomite Stone Mat",
@@ -771,7 +891,7 @@ const en: Content = {
       subtitle: "Coverage",
       contactTitle: "Direct Contact",
       contactCopy:
-        "If you have any specific issues or questions, write to us directly. We respond within 24 business hours.",
+        "If you have any specific issues or questions, write to us directly at jvelez@diatomusa.com. We respond within 24 business hours.",
       faqTitle: "Frequent Questions",
     },
     legal: {

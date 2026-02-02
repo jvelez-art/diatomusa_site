@@ -1,9 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
-import { SITE_CONFIG, CTA_TEXT } from "@/config/site-config";
-// import { cn } from "@/lib/utils"; 
-// Actually, looking at previous file reads, I didn't see a lib/utils. I'll stick to standard className strings if no util exists.
+import { SITE_CONFIG } from "@/config/site-config";
+import WaitlistModal from "@/components/WaitlistModal";
+import { useLanguage } from "@/components/LanguageContext";
 
 interface SmartCTAProps {
   className?: string;
@@ -11,12 +12,13 @@ interface SmartCTAProps {
 }
 
 export default function SmartCTA({ className = "", variant = "primary" }: SmartCTAProps) {
+  const { content } = useLanguage();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  
   const isPreLaunch = SITE_CONFIG.mode === "PRE_LAUNCH";
-  const label = isPreLaunch ? CTA_TEXT.PRE_LAUNCH : CTA_TEXT.LIVE;
-  const href = isPreLaunch 
-    ? `mailto:${SITE_CONFIG.contactEmail}?subject=Lista de Espera &body=Hola, quiero estar en la lista para el lanzamiento en España.` 
-    : SITE_CONFIG.amazonUrl;
-
+  // The logic for label is now dynamic based on content
+  const label = isPreLaunch ? content.smartCTA.preLaunch : content.smartCTA.live;
+  
   const baseStyles = "inline-flex items-center justify-center gap-2 transition-all duration-300";
   
   const variants = {
@@ -27,19 +29,37 @@ export default function SmartCTA({ className = "", variant = "primary" }: SmartC
 
   const appliedStyle = variant === "sticky" ? variants.sticky : (variant === "secondary" ? variants.secondary : variants.primary);
 
+  // If in PRE_LAUNCH mode, we use a button to open the modal
+  if (isPreLaunch) {
+    return (
+      <>
+        <button
+          onClick={() => setIsModalOpen(true)}
+          className={`${baseStyles} ${appliedStyle} ${className}`}
+        >
+          {label}
+          <span className="ml-1 text-[10px] opacity-70">
+             🇪🇸
+          </span>
+        </button>
+        
+        <WaitlistModal 
+          isOpen={isModalOpen} 
+          onClose={() => setIsModalOpen(false)} 
+        />
+      </>
+    );
+  }
+
+  // If in LIVE mode, standard link to Amazon
   return (
     <Link
-      href={href}
-      target={isPreLaunch ? undefined : "_blank"}
+      href={SITE_CONFIG.amazonUrl}
+      target="_blank"
       rel="noopener noreferrer"
       className={`${baseStyles} ${appliedStyle} ${className}`}
     >
       {label}
-      {isPreLaunch && (
-        <span className="ml-1 text-[10px] opacity-70">
-           🇪🇸
-        </span>
-      )}
     </Link>
   );
 }
